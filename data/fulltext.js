@@ -20,7 +20,7 @@ const FULLTEXT = {
     funding: "云南大学研究生精品课程建设项目资助",
     cip: "中国版本图书馆CIP数据核字（2012）第136330号",
     total_pages: 286,
-    transcribed_pages: 47
+    transcribed_pages: 68
   },
 
   /* 结构化目录（用于侧栏 / 目录导航） */
@@ -810,6 +810,325 @@ Common causes for the papers being rejected are:
 `- 6. http://conference.researchbib.com/?eventid=12232
 - 7. 有道词典　http://dict.youdao.com/
 - 8. Wehmeier, Sally. Oxford Advanced Learner's English-Chinese Dictionary (Sixth edition). Beijing: The Commercial Press, 2004.` }
+      ]
+    },
+
+    {
+      id: "p1-u6",
+      part: "Part I",
+      unit: "Unit 6",
+      title_en: "Acceptance of a Paper or an Abstract",
+      title_cn: "录用稿件",
+      print_start: 40,
+      pages: [
+        { pdf: 48, print: 40, content:
+`#Unit 6　Acceptance of a Paper or an Abstract
+##Sample Study
+>Directions: Read the following samples and learn the useful expressions.
+##Sample 1
+@The Society for Computer Simulation International
+@2000 SYMPOSIUM ON PERFORMANCE EVALUATION OF
+@COMPUTER & TELECOMMUNICATION SYSTEMS
+@July 16–20, 2000
+@Coast Plaza Hotel at Stanley Park
+@Vancouver, British Columbia, Canada
+##AUTHOR INSTRUCTIONS
+PLEASE REVIEW THIS MATERIAL CAREFULLY—IT CONTAINS INFORMATION THAT HAS NOT PREVIOUSLY BEEN INCLUDED IN OTHER SCS AUTHOR KITS.
+Please direct inquiries and correspondence regarding SPECTS 2000 Proceedings to the SCS office. For registration and conference information see the registration form in this kit or contact the SCS office at:
+@The Society for Computer Simulation International
+@4838 Ronson Court, Suite L, San Diego, CA 92111–1800
+@Tel:（858）277–3888；FAX:（858）277–3930；E-mail: scs@scs.org` },
+
+        { pdf: 49, print: 41, content:
+`@DUE DATE: May 30, 2000
+Dear Author:
+I am pleased to inform you that your above-referenced paper has been accepted for presentation at this conference and for printing in the conference Proceedings.
+ACCEPTANCE IS CONDITIONAL UPON OUR RECEIVING YOUR FINAL CAMERA-READY PAPER BY THE DATE ABOVE AND/OR A PAID AUTHOR REGISTRATION FOR AT LEAST ONE OF THE AUTHORS OF EACH PAPER, AND ON A FINAL REVIEW OF THE CAMERA-READY PAPER. If your work must be cleared or approved before publication by your institution, company, or governmental agency, please be sure that process will be completed by the due date above or we will not be able to include it in the conference Proceedings. If the paper is not approved by that date, you can discuss the possibility of presenting it as a late paper with your Conference Chairman. PLEASE NOTE: PAPERS CANNOT BE PUBLISHED IF PAYMENT (OR A PURCHASE ORDER) IS NOT RECEIVED BY THE CAMERA-READY DUE DATE.
+The enclosed author kit is provided to aid you in preparing your paper for publication in the Proceedings which will be distributed at the conference. PLEASE FOLLOW THE INSTRUCTIONS CAREFULLY.
+##PAGE LIMITS
+Papers accepted as FULL PAPERS are allowed a maximum of eight printed pages (without additional charges). Papers accepted as SHORT PAPERS are allowed a maximum of five printed pages (without additional charges). Additional pages will be assessed at $40 per page. Please see the enclosed registration form for any further registration information.
+##MULTIPLE PAPERS
+If you are presenting multiple papers` },
+
+        { pdf: 50, print: 42, content:
+`please see enclosed author registration form for further information.
+We have enclosed some guidelines you will find helpful as you prepare your oral presentation for the conference. Please note the list of audio-visual equipment which will be available for your use at the conference. If you require any other equipment, you must advise us well in advance and you are responsible for the cost. We will try to accommodate your needs without extra cost to you, but special orders may be charged directly to you.
+##ITEMS WHICH MUST ACCOMPANY FINAL PAPER SUBMISSIONS
+##MANUSCRIPT
+Your manuscript in required format as assigned by conference chair, on high-quality bond paper. Manuscripts exceeding the allotted page limits (five pages for short papers, eight pages for long papers) will only be accepted with payment of the excess page charge of US $40 per page.
+##PHOTOCOPIES
+Four (4) photocopies must be included with the original manuscript. (There is a US $2 per page copying fee, if the copies are not sent with the manuscript. For example, if your manuscript is 6 pages, the copying fee for 4 copy sets would be $48).
+##REGISTRATION FORM AND PAYMENT
+Payment of the fees is a requirement of having your paper published in the proceedings. If your paper and your payment are being processed separately, please include a note with registration form indicating such. The advance registration fee is associated with publication of the paper and is NOT REFUNDABLE, but is transferable to the designee who will present your paper at the conference. Authors of published manuscripts must pay the full registration fee.` },
+
+        { pdf: 51, print: 43, content:
+`##POSTCARD
+Please legibly print your address on the enclosed postcard. It will be returned to you to acknowledge receipt of your paper.
+##TRANSFER OF COPYRIGHT FORM
+We require as a condition for acceptance of papers that all authors execute the copyright transfer to Simulation Councils, Inc., the name under which The Society for Computer Simulation International is incorporated. Please note that by signing the form you are simply giving your permission to SCS to publish the paper. For this reason, there is no problem if the material is already in the public domain, such as work done with government support. The Society for Computer Simulation International controls the commercial use of material we publish, while you or your company retain the right to reuse the work, in whole or in part.
+##SPECIAL A/V REQUESTS
+Please take a moment to include this information with your paper. An overhead (one will be in every room) or a 35mm projector (please request) is available at no charge. All other special requests require payment up front for their rental fees. For those who prefer to use a laptop computer for their presentation, a SVGA projection system will be available for a rental fee of $100 per session. Availability is limited, and reservations are on a first come, first serve basis. We cannot guarantee that special A/V requests beyond the above listed will be available at the time of the conference without prior notification and payment. At the conference, you will be required to pay for any equipment at the Registration Desk at time of request.
+##BIOGRAPHICAL NOTE
+A brief note about you for use as introductory material by your session leader at the conference.` },
+
+        { pdf: 52, print: 44, content:
+`##INDIVIDUAL REPRINT ORDER FORM
+Individual Reprint Order Form and prepayment, if desired. (optional)
+All material should include the SCS Paper ID Code (e.g., 2600, 9820, etc.) SCS is not responsible for correspondence or forms submitted without this code. When writing this code on your actual manuscript, do so on the back of each page.
+Thank you for your interest and cooperation. We hope that you will find participation in the conference professionally stimulating and rewarding. If you have any questions regarding the conference or your paper submittal, please call or write us.
+（http://www.scs.org/confrnc/scsc/scsc00/spects/species2k_author_kit.html）
+##Words and Expressions
+- 1. proceedings [prə'siːdiŋz] n. the official written report of a meeting, etc. 会议记录；论文集
+- 2. allotted [ə'lɔtid] adj. to be given time, money, tasks, etc. to somebody/something as a share of what is available 专款的；拨出的 v. 分配；指派；拨给（allot 的过去分词）
+- 3. audio-visual equipment 视听设备
+- 4. the acceptance of papers 论文录用
+##Useful Sentence Patterns
+- 1. I am pleased to inform you that your paper has been accepted. 很高兴通知您，本次大会已录用您提交的论文。
+- 2. Acceptance is conditional on... 论文录用是以……为前提的。
+- 3. ... will be available for your use at the conference……将在大会上使用。` },
+
+        { pdf: 53, print: 45, content:
+`- 4. Special orders may be charged directly to you. 特殊要求需自行承担费用。
+- 5. If you have any questions regarding the conference or your paper submittal, please call or write us. 若对会议或论文提交仍有不清楚之处，请打电话或写信与我们联系。
+##Sample 2
+Dear Dr. Makki Akasha Babikier:
+I am pleased to inform you that the following paper which you submitted to The 2011 International Conference on Bioinformatics and Computational Biology（BIOCOMP'11: July 18–21, 2011, USA）has been accepted as a Regular Research Paper (RRP)—ie, accepted for both, publication in the proceedings and oral formal presentation. Please see below for the categories of accepted papers.
+@Paper ID #: BIC2612
+@Title: Classification of Cardiac Arrhythmias Using Machine Learning Techniques Based on ECG Signal Matching
+@Makki Akasha Babikier
+@College of Computer Science and Information Technology,
+@Sudan University of Science and Technology, Sudan
+Note: The “paper ID #” shown above is composed of three letters (conference prefix) followed by four numeral/digits. You will need to have this “Paper ID #” at the time of registration and final paper submission (for publication).
+（The evaluation of this paper is arranged by Track Chair # 873）
+General comments to authors of accepted papers:
+- 1. Each paper was peer-reviewed by two experts in the field for originality, significance, clarity, impact, and soundness. In cases of contradictory recommendations, a member of the conference program` },
+
+        { pdf: 54, print: 46, content:
+`committee was charged to make the final decision (accept/reject)—often, this involved seeking help from additional referees by using a double-blinded review process. In addition, all papers whose authors included a member of the conference program committee were evaluated using the double-blinded review process. Chairs of approved sessions were responsible in evaluating the papers that were submitted to them.
+- 2. Authors of accepted papers are strongly encouraged to enhance the organization and the quality of the English writeup of their papers before uploading them to the publication web site for the preparation of the printed books/proceedings.
+- 3. Compiled Referees Reports:
+- Originality（1 Poor-10 Very Good）: 8
+- Technical Quality（1 Poor-10 Very Good）: 7
+- Significance of Contribution（1 Poor-10 Very Good）: 7
+- Readability and Organization（1 Poor-10 Very Good）: 7
+- Relevance to the topic of BIOCOMP（1 Not relevant-10 Very relevant）: 10
+- Overall Recommendation（1 Reject-10 Strong Accept）: 8
+- Degree of Expertise of Reviewer in the topic（1 Poor-10 Good）: 9
+Specific Comment to the Authors:
+The only suggestion we have for the authors is to update the reference list to also include citations to more recently published papers.
+For information regarding author instructions including:
+- • Presentation Formats / Accepted Paper Categories
+- • Typing Instructions
+- • Deadline（registration and camera-ready papers due: May 7, 2011）
+We strongly encourage authors to register as soon as possible.` },
+
+        { pdf: 55, print: 47, content:
+`- • For Conference Registration, Hotel Reservation, Conference Program/Schedule, please visit:
+http://www.worldacademyofscience.org/worldcomp11/ws/authors
+For Submission of Final Camera-Ready Papers for Publication in the Conference Proceedings/book, please visit:
+http://www.ucmss.com/cr/main/papersNew/worldcomp11_first.html
+To Request Invitation Letters for US Visa Purposes, please visit:
+http://www.ucmss.com/cr/main/invitations/worldcomp_index.html
+General information can be found at:
+http://www.world-academy-of-science.org/
+Congratulations, and thank you for your contribution to the Conference. We look forward to seeing you at the conference in July.
+@Kind regards,
+@Hamid
+（http://www.sustech.edu/files/workshop/20110410073637672.doc）
+##Words and Expressions
+- 1. soundness ['saundnis] n. something which is good and thorough 健康；稳固；完整；公正
+- 2. double-blinded review 双盲评审
+##Useful Sentence Patterns
+- 1. the following paper which you submitted to... has been accepted. 您提交的论文已被录用。
+- 2. Authors of accepted papers are strongly encouraged to enhance the organization and the quality of the English writeup of their papers. 论文一经录用，作者须对文章的组织结构、英语写作进行完善。
+- 3. For information regarding author instructions including... 作者须知其他事宜……` },
+
+        { pdf: 56, print: 48, content:
+`- 4. Congratulations, and thank you for your contribution to the Conference. 祝贺您的论文被录用，并感谢您向本次大会投稿。
+##Exercise
+- 1. Directions: Fill in the blanks in English based on the information given in the brackets.
+Dear Mr. Adeyeye:
+__________（①谨代表）the Technical Program Committee, __________（②我们很高兴通知您）that your paper #1569296037 __________（③标题为）“Quality of Experience of the HTTP Session Mobility Service”__________（④已被采纳作为宣读论文）at IPTCOMM 2010 as an “Industry Talk”.
+The TPC __________（⑤筛选了）24% papers from this year's submission as “Full papers” and recommended an additional 4 papers be selected as “Work in progress papers”. The TPC also __________（⑥提议）a group of 4 papers be presented as __________（⑦“行业报告”）since their content “highlights the innovation of the solutions presented, as well as the impact and benefits for the community”. The “Industry Talks” session is intended to foster feedback from design to research with __________（⑧高层次的探讨和思想交流）.
+Your paper has been chosen as an “Industry Talk”. __________（⑨祝贺）on your achievement! Please plan a half hour presentation, __________（⑩留点时间进行提问和讨论）. For more information about Industry Talks, please __________（⑪请参阅）http://iptcomm.org/cftid/index.html.
+At least one author of each accepted talk must __________（⑫注册报到）for the conference by June 27, 2010. We will have __________（⑬网上报名）page ready soon—please check the IPTComm website（http://iptcomm.org）for __________（⑭更新）on the` },
+
+        { pdf: 57, print: 49, content:
+`registration process.
+@We look forward to welcoming you in Munich, Germany.
+@Sincerely,
+@Carol Davids and Saverio Niccolini
+@IPTComm 2010 Industry Talks and Demos Co-chairs
+@Vijay K. Gurbani and Gonzalo Camarillo
+@IPTComm 2010 TPC Co-chairs
+（http://www.ngportal.com/micadeyeye/index.php/category/conferences/）
+- 2. Directions: Translate the following into English.
+我谨代表组委会，感谢您提交的研究方案和题为“让所有的孩子在友好、有效的学习环境中接受教育”的论文。我很高兴地通知您，您的方案已被接受，我们邀请您到会宣读论文。
+请注意，宣读论文的参会者需在 2012 年 3 月 31 日前登记参会并提交论文。否则，论文将不在此次会议上使用。
+我收到论文后便电子邮件回复收讫，同时附上报名表、登记住宿须知以及大会论文集收录论文格式要求等。如果您 5 月底还没有收到来信，请与我联系。
+今年 8 月在格拉斯哥见！
+祝好！
+- 3. Writing
+>Directions: Study the samples in this Unit or refer to a sample in the relevant website and write a letter of acceptance of a paper submitted to a conference in your academic field.` },
+
+        { pdf: 58, print: 50, content:
+`##Supplementary Reading
+@To: Ozer@sfsu.edu
+@From: 8NCEE@mirasmart.com
+@Subject: Abstract 354, Abstract, ST Building structures
+@Date: 8/1/2005 3:59:47 PM
+On behalf of the Program Committee, I am pleased to inform you that the abstract of your paper and presentation for the 8th US National Conference on Earthquake Engineering has been accepted. The Program Committee looks forward to your continued participation in the 2006 Earthquake Conference through submission of the formal written paper and its presentation during the conference.
+As you may already know, the 8th USNCEE is being co-convened with the SSA and DRC conferences in 2006 (see http://www.1906eqconf.org/ for additional details). The Program Committee for the 8th USNCEE is working with related committees of the SSA and DRC conferences to define a coordinated program, and is not scheduled to finalize all the program details until January 2006. We are, however, planning several specially coordinated sessions.
+If your paper abstract is deemed suitable for inclusion in one of these sessions, we anticipate being able to invite your participation no later than two to three weeks from now. Otherwise, your paper will be presented in a session (either oral or poster) organized according to your topic area. Final assignments will be made around 1 February 2006. In accordance with the published schedule for the conference, papers are to be submitted online no later than October 15, 2005 at http://submissions.miracd.com/8ncee. This site will be open for accepting papers on September 1. Specifications for paper length (10 pages), formatting details, a template with an example paper, and in-` },
+
+        { pdf: 59, print: 51, content:
+`structions can be downloaded from http://www.1906eqconf.org/.
+Submitted papers will be reviewed on the basis of technical content and quality of presentation. The Program Committee reserves the right to reject papers that do not conform to adequate English usage or are specifically commercial or promotional in nature. Authors will be notified of paper acceptance (or tentative acceptance if revisions are required) on 15 December 2005, with final papers due on 16 January 2006. All accepted papers will be published in the conference proceedings, which also will include written submissions from the participants in the co-convened SSA and DRC conferences.
+In view of the large number of abstracts submitted and in the interest of promoting a diverse group of presenters, the Program Committee has decided that no presenting author will be allowed to present more than two papers. Exceptions will be granted only in special cases. If you are a co-author of more than two papers, we encourage you to assign a co-author as the presenting author so your paper still can be presented. All presenting authors are required to register for the conference.
+An author's fee of $240 per paper is due at the time of submission and may be paid via the secure web site with a Visa or MasterCard credit card. In exceptional cases, the fee may be mailed directly to EERI with a check drawn on a U.S. bank (payable to EERI). Submissions are not considered complete until the fee has been received. At the time of conference registration, the sum of one author's fee will be deducted from the full registration fee. If an author is paying for two or more papers, only one author's fee will be deducted from the registration fee. Authors do not qualify for one-day conference registration fees.
+We appreciate your interest in the 8th USNCEE and look forward to your participation.
+@Sincerely,` },
+
+        { pdf: 60, print: 52, content:
+`@Jack P. Moehle
+@Chair, 8th USNCEE Program Committee
+@file://C:\\Documents and Settings\\Ozer\\Desktop\\4 th paper.htm8/24/2005
+（http://userwww.sfsu.edu/~ozer/4%20th%20paper.pdf）
+##Words and Expressions
+- 1. coordinate ['kəu'ɔːdineit] vt. to organize the different parts of an activity and the people involved in it so that it works well 调整；使调和；调节；整理 adj. 协调的
+- 2. in accordance with... 与……一致
+- 3. in view of... 鉴于……；从……来看
+- 4. in exceptional cases 特殊情况下
+- 5. a check drawn on a... bank 由……银行支付的支票
+- 6. registration fee 注册费
+- 7. be co-convened with... 与……共同承办
+##Useful Sentence Patterns
+- 1. I am pleased to inform you that the abstract of your paper and presentation for... has been accepted. 很高兴通知您，您提交的……论文摘要和学术报告已被录用。
+- 2. ... reserves the right to reject papers……保留退稿权
+- 3. All accepted papers will be published in the conference proceedings. 所有录用论文将在会议论文集上发表。
+- 4. Exceptions will be granted only in special cases. 特殊情况作特殊处理。
+- 5. We appreciate your interest in... and look forward to your participation. 感谢您对……的关注，我们期待着您的到来。` },
+
+        { pdf: 61, print: 53, content:
+`##References
+- 1. http://www.scs.org/confrnc/scsc/scsc00/spects/species2k_author_kit.html
+- 2. http://www.sustech.edu/files/workshop/20110410073637672.doc
+- 3. http://www.ngportal.com/micadeyeye/index.php/category/conferences/
+- 4. http://www.cehs.wright.edu/~cfinegan/Presentations/IntlPPT/accepted.doc
+- 5. http://userwww.sfsu.edu/~ozer/4%20th%20paper.pdf
+- 6. 有道词典　http://dict.youdao.com/
+- 7. http://oald8.oxfordlearnersdictionaries.com/
+- 8. Wehmeier, Sally. Oxford Advanced Learner's English-Chinese Dictionary (Sixth edition). Beijing: The Commercial Press, 2004.` }
+      ]
+    },
+
+    {
+      id: "p1-u7",
+      part: "Part I",
+      unit: "Unit 7",
+      title_en: "Rejection of a Paper",
+      title_cn: "拒稿",
+      print_start: 54,
+      pages: [
+        { pdf: 62, print: 54, content:
+`#Unit 7　Rejection of a Paper
+##Sample Study
+>Directions: Read the following samples and learn the useful expressions.
+##Sample 1
+Dear Tyler Close,
+We are sorry to inform you that your submission was not selected for publication by the program committee for the 2009 IEEE Symposium on Security and Privacy. The selection process was highly competitive, with only 26 of 254 submissions selected.
+Reviewers' comments are included below and are available at the reviewing website:
+http://oakland09.cs.cornell.edu/oakland09/paper.php?p=31
+We hope that these reviews will be useful to you.
+Thank you for submitting to IEEE Security and Privacy, and we hope to see you at the conference in May!
+@Best regards,
+@Andrew Myers and Dave Evans,
+@Co-Chairs, 2009 IEEE Symposium on Security and Privacy Program Committee
+（http://waterken.sourceforge.net/aclsdont/oakland09-rejection.txt）
+##Words and Expressions
+- 1. submission [səb'miʃn] n. the act of giving a document, proposal to sb. in authority so that they can study or consider it 提交的文件、建议等，呈递` },
+
+        { pdf: 63, print: 55, content:
+`- 2. symposium [sim'pəuziəm] n. a meeting at which experts have discussions about a particular subject, a small conference 专题研讨会，小型讨论会
+##Useful Sentence Patterns
+- 1. We are sorry to inform you that your submission was not selected for publication. 我们非常抱歉地通知你，你的投稿没有被选中出版。
+- 2. The selection process was highly competitive. 甄选过程十分激烈。
+- 3. Thank you for submitting to... 非常感谢你向……投稿。
+##Sample 2
+I am sorry to inform you that your paper “Windows PowerShell: A New Approach to Automation” was not selected by the Refereed Paper Program Committee for the LISA2007 conference.
+Please acknowledge receipt of this email to <lisa07chair@usenix.org>.
+We had 55 submissions and were only able to accept 22. I am enclosing some comments on your submission by members of the programme committee—I hope that you will find these helpful, and that you will consider submitting to LISA again in the future. I hope that you will be able to attend the conference in Dallas and I look forward to meeting you there—you may also like to consider submitting a poster or a WIPS presentation:
+http://www.usenix.org/events/lisa07/cfp/workshops.html.
+Many thanks for your submission.
+@Paul Anderson
+（http://blog.ixpub.net/html/29/9781829-406760.html）` },
+
+        { pdf: 64, print: 56, content:
+`##Words and Expressions
+- 1. enclose [in'kləuz] v. if you enclose something with a letter, you put it in the same envelope 随函附寄，封入
+- 2. acknowledge receipt of 收到，认收
+##Useful Sentence Patterns
+- 1. I am sorry to inform you that your paper... was not selected by the committee for the conference. 我很遗憾地通知您，您的文稿……没有被评审委员会选中，所以不能到会宣读。
+- 2. We had 55 submissions and were only able to accept 22. 我们收到 55 份申请，只能接受 22 份。
+- 3. Many thanks for your submission. 十分感谢您的投稿。
+##Exercise
+- 1. Directions: Fill in the blanks in English based on the information given in the brackets.
+The ACM SIGCOMM 2009 Conference（SIGCOMM 2009）program committee is __________（①很遗憾地通知您）that your paper #311 __________（②没有被选中）for publication, and will not appear in the conference.
+In terms of the overall process, this year, Sigcomm received 270 submissions. __________（③评审过程）was organized in three rounds, all with double __________（④盲评）.
+__________（⑤第一轮）, each paper was assigned to two reviewers. All __________（⑥评审意见）were read by the PC chairs and discussed with the reviewers in order to ensure that there was __________（⑦充分的理由）behind the reviewers' recommendation and that those assessments were by experts in the field (normally within the TPC, but in some cases from external reviewers). All papers` },
+
+        { pdf: 65, print: 57, content:
+`for which __________（⑧未能达成一致）on a reject decision __________（⑨分配给）one or more additional reviewers in the second round.
+After the second round, __________（⑩网上评论）on papers was opened to all TPC members. Additional reviews (up to a total of 7 for some papers) were allocated to address open issues. The goal was to gain a good understanding of the __________（⑪优缺点）of the papers. At the end of the three phase process, 60 papers were __________（⑫认定）for discussion during the TPC meeting.
+The TPC meeting took place in London on April 16th and 17th. After a day and a half of discussions, 27 papers were __________（⑬选作大会发言）at Sigcomm. Some of them have been conditionally accepted and assigned a shepherd.
+We hope authors will appreciate the amount and quality of __________（⑭反馈意见）. This year, papers received 2 to 7 reviews each, several of them extremely detailed. For those papers discussed at the TPC meeting, we have further included __________（⑮讨论意见小结）in the comments field of the outcop paper management system. We are confident that all this information will be helpful to the authors in the preparation of their __________（⑯论文最终稿/版）or for future work.
+Reviews and comments on your paper __________（⑰附在）this email. The submission's site also has the paper's reviews and comments, as well as more information about review scores. __________（⑱登录）, either click the link below or paste it into your web browser's location field.
+http://sigcomm09.intel-research.net/?email=capveg%40cs.und.edu&password=whazhifuc
+With that we would like to __________（⑲感谢您的投稿）` },
+
+        { pdf: 66, print: 58, content:
+`and we hope to see you in Barcelona.
+@Dina Papagiannaki & Luigi Rizzo
+@Sigcomm 2009 TPC chairs
+（http://yuba.stanford.edu/group.wp/submission-feedback-for-flowvisor-sigcomm-2009-paper/）
+- 2. Directions: Translate the following into English.
+尊敬的福斯特博士：
+感谢您给大会提交的论文。
+我们很遗憾地通知您，您的论文没有被选中，因此不能到会做发言，也不能收录出版。所有提交的论文都经过项目委员会的评审。虽然我们收到很多有价值的论文，但只有 20% 质量高、影响大的文章会被选出到大会上宣读。未入选的基本原因还在于文章对技术细节的处理不够合理，且新颖度不够。此外，带有商业倾向的文章不予接受。
+如果您对您提交的论文还有什么具体问题，请进入会议网页与玛丽·史密斯联系。她将很乐意将您的邮件转给负责评论和作答的那位负责人。
+我们希望您能参加我们项目下一次主办的年度科技会议。到时请登录项目网页报名登记。
+我们项目主办的 2012 年度科技会议将于 2012 年 11 月 4～7 日在加州旧金山举行。希望您能考虑参加并提交带有原创性的论文。
+- 3. Writing
+>Directions: Study the samples in this Unit or refer to a sample in the relevant website and write a letter to reject an abstract or a paper for a conference in your academic field.` },
+
+        { pdf: 67, print: 59, content:
+`##Supplementary Reading
+Dear Haskell 09 author,
+I regret to inform you that your paper was not selected by the program committee to appear in the Haskell 09 Symposium. This year we received 31 submissions, of them, 12 were accepted. Overall, the quality of submissions was extremely high. Many good papers could not be included. I do hope that you will be able to attend the Symposium.
+I include below the reviewers' scores and comments. I hope they will offer you guidance in revising your paper. If you have any additional questions, please feel free to contact me.
+Thank you for submitting to Haskell 2009.
+@Stephanie Weirich
+@Haskell 2009 Program Chair
+（https://svn.science.uu.nl/repos/project.ruler.papers/hs2009-defer/referee-comments.txt）
+##Words and Expressions
+- 1. additional [ə'diʃənl] more than was first mentioned or is usual 附加的，额外的，外加的
+- 2. Haskell 一种纯函数式编程语言
+##Useful Sentence Patterns
+- 1. I regret to inform you that your paper was not selected by the committee... 我很遗憾地通知您，您的论文没有被项目委员会选中。
+- 2. If you have any additional questions, please feel free to contact me. 如果还有其他任何问题，请与我联系。` },
+
+        { pdf: 68, print: 60, content:
+`- 3. Thank you for submitting to Haskell 2009. 感谢您向哈斯卡尔 2009 研讨会投稿。
+##References
+- 1. http://waterken.sourceforge.net/aclsdont/oakland09-rejection.txt
+- 2. http://blog.ixpub.net/html/29/9781829-406760.html
+- 3. http://yuba.stanford.edu/group.wp/submission-feedback-for-flowvisor-sigcomm-2009-paper/
+- 4. http://www.medicamail.com/download.php?file=file-291110183515-0.doc
+- 5. https://svn.science.uu.nl/repos/project.ruler.papers/hs2009-defer/referee-comments.txt
+- 6. Hornby, A. S. Oxford Advanced Learner's English-Chinese Dictionary. Oxford: Oxford University Press, 2009.
+- 7. Sinclair, J. Collins Cobuild English-Chinese. Harper Collins Publishers, 2006.
+- 8. 陆谷孙：《英汉大词典》，上海：上海译文出版社，2007。
+- 9. 有道词典　http://dict.youdao.com/` }
       ]
     }
   ]
