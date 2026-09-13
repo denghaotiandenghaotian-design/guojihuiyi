@@ -727,9 +727,73 @@
       else parent.appendChild(el("p","ft-p",esc(b.v)));
     });
   }
+  let ftMode="verified", ftPage=1, ftShowText=true;
+  function ftModeBar(){
+    const bar=el("div","ex-modebar");bar.style.marginBottom="12px";
+    [["verified","📖 精校文本"],["scan","🖼️ 全书原书影像"]].forEach(([v,label])=>{
+      const b=el("button","btn sm"+(ftMode===v?" primary":""),label);
+      b.addEventListener("click",()=>{ftMode=v;viewFulltext();});
+      bar.appendChild(b);
+    });
+    return bar;
+  }
+  function ftGoPage(p){ftPage=Math.max(1,Math.min(FULLTEXT.meta.total_pages,p));ftMode="scan";viewFulltext();}
+  function viewScanReader(c){
+    const M=FULLTEXT.meta;
+    const head=el("div","kp-head");
+    head.innerHTML=`<div class="tag">全书原书影像 · ${M.total_pages} 页</div><h2>${esc(M.title_cn)}</h2>
+      <div class="sub">扫描版原书逐页影像（原书原貌）+ 机器识别文本（供检索 / 复制，个别字符可能有误，以影像为准）。</div>`;
+    c.appendChild(head);
+    c.appendChild(ftModeBar());
+
+    const bar=el("div","ft-scan-bar");
+    const prev=el("button","btn sm","← 上一页");
+    const next=el("button","btn sm","下一页 →");
+    const jump=el("input","ft-jump");jump.type="number";jump.min=1;jump.max=M.total_pages;jump.value=ftPage;
+    const go=el("button","btn sm primary","跳转");
+    prev.addEventListener("click",()=>ftGoPage(ftPage-1));
+    next.addEventListener("click",()=>ftGoPage(ftPage+1));
+    go.addEventListener("click",()=>ftGoPage(parseInt(jump.value,10)||1));
+    jump.addEventListener("keydown",e=>{if(e.key==="Enter")ftGoPage(parseInt(jump.value,10)||1);});
+    const tg=el("label","ft-tg");
+    tg.innerHTML=`<input type="checkbox" ${ftShowText?"checked":""}> 显示识别文本`;
+    tg.querySelector("input").addEventListener("change",e=>{ftShowText=e.target.checked;viewFulltext();});
+    const sel=el("select","ft-select");
+    sel.innerHTML=`<option value="">跳转到单元…</option>`+
+      FULLTEXT.contents.flatMap(part=>part.units.map(u=>`<option value="${Math.min(M.total_pages,u.print+8)}">${esc(part.part)} · ${esc(u.unit)} ${esc(u.title_cn)}（原书 p.${u.print}）</option>`)).join("");
+    sel.addEventListener("change",()=>{if(sel.value)ftGoPage(parseInt(sel.value,10));});
+    [prev,next,jump,go,sel,tg].forEach(n=>bar.appendChild(n));
+    c.appendChild(bar);
+
+    const range=el("input","ft-range");range.type="range";range.min=1;range.max=M.total_pages;range.value=ftPage;
+    range.addEventListener("change",()=>ftGoPage(parseInt(range.value,10)));
+    range.addEventListener("input",()=>{jump.value=range.value;});
+    c.appendChild(range);
+    c.appendChild(el("div","ft-pos",`第 <b>${ftPage}</b> / ${M.total_pages} 页`));
+
+    const wrap=el("div","ft-scan");
+    const img=el("img","ft-img");img.loading="lazy";img.alt="原书第 "+ftPage+" 页";
+    img.src="assets/pages/page_"+String(ftPage).padStart(3,"0")+".jpg";
+    wrap.appendChild(img);
+    if(ftShowText){
+      const ocr=(typeof FULLTEXT_OCR!=="undefined"&&FULLTEXT_OCR.pages.find(p=>p.p===ftPage));
+      const box=el("div","ft-scan-text");
+      box.appendChild(el("div","ft-pagemark","识别文本 · 第 "+ftPage+" 页（机器识别，仅供参考）"));
+      box.appendChild(el("pre","ft-pre",esc(ocr?ocr.t:"（本页无识别文本）")));
+      wrap.appendChild(box);
+    }
+    c.appendChild(wrap);
+
+    const nav2=el("div","ft-scan-bar");
+    const p2=el("button","btn sm","← 上一页");const n2=el("button","btn sm","下一页 →");
+    p2.addEventListener("click",()=>ftGoPage(ftPage-1));n2.addEventListener("click",()=>ftGoPage(ftPage+1));
+    nav2.appendChild(p2);nav2.appendChild(n2);c.appendChild(nav2);
+  }
   function viewFulltext(param){
     const c=$("#content");c.innerHTML="";
+    if(ftMode==="scan"){viewScanReader(c);return;}
     const M=FULLTEXT.meta;
+    c.appendChild(ftModeBar());
     if(param){
       const sec=FULLTEXT.sections.find(s=>s.id===param);
       if(!sec){viewFulltext();return;}
