@@ -20,7 +20,7 @@ const FULLTEXT = {
     funding: "云南大学研究生精品课程建设项目资助",
     cip: "中国版本图书馆CIP数据核字（2012）第136330号",
     total_pages: 286,
-    transcribed_pages: 20
+    transcribed_pages: 31
   },
 
   /* 结构化目录（用于侧栏 / 目录导航） */
@@ -369,6 +369,190 @@ On behalf of the organizing committee, we invite all of our friends and colleagu
 - 6. http://oald8.oxfordlearnersdictionaries.com/
 - 7. 有道词典　http://dict.youdao.com/
 - 8. Wehmeier, Sally. Oxford Advanced Learner's English-Chinese Dictionary. Sixth edition. Beijing: The Commercial Press, 2004.` }
+      ]
+    },
+
+    {
+      id: "p1-u3",
+      part: "Part I",
+      unit: "Unit 3",
+      title_en: "Acceptance of an Invitation",
+      title_cn: "接受邀请",
+      print_start: 13,
+      pages: [
+        { pdf: 21, print: 13, content:
+`#Unit 3　Acceptance of an Invitation
+##Sample Study
+>Directions: Read the following samples and learn the useful expressions.
+##Sample 1
+Dear [Recipient],
+I am very much elated to have been invited to speak at the AIDS Conference this year. As informed, I shall be present for the Conference to be held at City Hall on Saturday, March 13 at 9:00 a.m.
+I have been making some inroads into certain new concepts regarding AIDS prevention and wish to take up this opportunity to make my findings known to people attending the conference. Since I have many transparencies I wish to show for my presentation, I would want to have the facilities of an overhead projector in addition to a projector and a projection screen.
+I thank you for making all arrangements towards stay and travel and thankfully accept your kind offer of a $1000 honorarium.
+@Sincerely,
+@Patricia White
+（http://www.samplelettersworld.com/sample-letters/acceptance-letters/1598-accept-an-invitation-to-speak-or-perform-sample-letter-8）
+##Words and Expressions
+- 1. elated [i'leitid] adj. happy; pleased 兴高采烈的
+- 2. transparency [træns'pærənsi] n. 幻灯片
+- 3. overhead projector 高射投影仪` },
+
+        { pdf: 22, print: 14, content:
+`- 4. honorarium [ˌɔnə'rɛəriəm] n. allowance 报酬，谢礼
+##Useful Sentence Patterns
+- I have been making some inroads into... 我一直在探索……
+##Sample 2
+I am extremely honored by the invitation to speak at the Annual Technology Conference on Saturday, June 19, at 11:00 a.m. My topic on that day will cover on “VoIP—The New Technology in Improved Communications” and I shall be able to cover it in the stipulated thirty-minute schedule that you have allotted for me. I hope there will be adequate arrangements like an overhead projector and screen for me to make my presentation. I again thank you for providing me with this opportunity. I hope to be able to meet with many like minded people during the conference.
+@Sincerely,
+@Emily Ellison
+（http://www.samplelettersworld.com/sample-letters/acceptance-letters/1599-accept-an-invitation-to-speak-or-perform-sample-letter-9）
+##Words and Expressions
+- 1. stipulate ['stipjuleit] vt. require or rule 规定
+- 2. VoIP = Voice over Internet Protocol 网络电话
+##Useful Sentence Patterns
+- I hope to be able to meet with many like minded people during the conference. 会议期间，我希望能见到许多有识之士。` },
+
+        { pdf: 23, print: 15, content:
+`##Exercise
+- 1. Directions: Fill in the blanks in English based on the information given in the brackets.
+Dear Oscar,
+__________（①我很荣幸收到您的邀请）asking me __________（②做有关……的演讲）on the 5th Public Relations Students Conference at Delaware University on June 1, 2010 at 1:00 p.m. I am pleased to inform you that __________（③我表示感谢并接受您的邀请）to inspire the students about the new trend of public relations.
+I am at present developing new synergies of public relations. In fact, during the last few months I've been __________（④参加不同的研讨活动）to uplift my knowledge and techniques __________（⑤就这一话题/领域）. This event is a good opportunity to __________（⑥展示我的专门知识）and to share with the students the evolution of public relations.
+I am planning to __________（⑦使用 PPT）in my presentation and I would appreciate it very much __________（⑧如果您能为我提供）an overhead projector and projection screen. Since I will be speaking to more than 200 students, it would be more comfortable to speak on a podium.
+Thank you for __________（⑨安排宾馆住宿）for me. I look forward to seeing you at the conference.
+@Sincerely,
+@…
+（http://officewriting.com/category/sample-letters/acceptance-letter/）
+- 2. Directions: Translate the following into English.
+@我很高兴地接受您的邀请，请我参加 2012 年 5 月 11 日星期五` },
+
+        { pdf: 24, print: 16, content:
+`在主校区肯特中心举行的会议并作发言。
+因发言所需，恳请给我安排在有投影和屏幕的多功能厅，我还需要使用衣领话筒。如果方便的话，请给我一些有关听众的教育背景和经历等方面的情况简介，以便我更好地准备演讲的专业材料。
+我很快就会安排我的行程。我将在会议开始前两天将我到达的确切日期电邮给您。下周我会给您电话确认我的行程并安排报销事宜。
+我期待着会议的到来。
+- 3. Writing
+>Directions: Study the samples in this Unit or refer to a sample in the relevant website and write a letter to accept an invitation to a conference in your academic field.
+##Supplementary Reading
+Dear [Recipient],
+I am extremely honored to agree to your invitation to speak at your seminar to be held at Charleston University. I am so happy that I was chosen for this occasion.
+You have provided me with a list of topics and I opt to speak about Stem Cell Preservation. I have been doing a lot of research lately in this regard and would like to present my findings during the seminar.
+My associate and I will fly down on October 21 and we shall come down to the seminar at the University at 9:00 a.m. on October 22. I shall be carrying some data on the laptop, so I will need some arrangements to connect this to the projector screen. I know that the audience will be of a type who has a lot of interest in the subject and will be happy to interact with them. Will it be possible to have an interaction session following the presentation?` },
+
+        { pdf: 25, print: 17, content:
+`Thank you for making the necessary arrangements beforehand. I have already received the tickets and the details about hotel reservations. I wish to once again take up this chance to thank you. I very much look ahead to being present at the seminar and making my speech.
+@Sincerely,
+@John White
+（http://www.samplelettersworld.com/sample-letters/acceptance-letters/1596-accept-an-invitation-to-speak-or-perform-sample-letter-6）
+##Words and Expressions
+- 1. Stem Cell 干细胞
+- 2. interact with sb. 与某人进行交流
+- 3. take up 利用
+- 4. look ahead to doing sth. 期待做某事
+##Useful Sentence Patterns
+- 1. I am extremely honored to agree to your invitation. 我非常荣幸地接受您的邀请。
+- 2. Thank you for making the necessary arrangements beforehand. 感谢您提前所做的必要安排。
+##References
+- 1. http://www.samplelettersworld.com/sample-letters/acceptance-letters/1598-accept-an-invitation-to-speak-or-perform-sample-letter-8
+- 2. http://www.samplelettersworld.com/sample-letters/acceptance-letters/1599-accept-an-invitation-to-speak-or-perform-sample-letter-9
+- 3. http://officewriting.com/category/sample-letters/acceptance-letter/` },
+
+        { pdf: 26, print: 18, content:
+`- 4. http://www.samplelettersworld.com/sample-letters/acceptance-letters/1592-accept-an-invitation-to-speak-or-perform-sample-letter-2
+- 5. http://www.samplelettersworld.com/sample-letters/acceptance-letters/1596-accept-an-invitation-to-speak-or-perform-sample-letter-6
+- 6. 有道词典　http://dict.youdao.com/
+- 7. 百度词典　http://dict.baidu.com/` }
+      ]
+    },
+
+    {
+      id: "p1-u4",
+      part: "Part I",
+      unit: "Unit 4",
+      title_en: "Declining an Invitation to Speak",
+      title_cn: "谢绝邀请发言",
+      print_start: 19,
+      pages: [
+        { pdf: 27, print: 19, content:
+`#Unit 4　Declining an Invitation to Speak
+##Sample Study
+>Directions: Read the following samples and learn the useful expressions.
+##Sample 1
+Dear [Recipient],
+Thank you for your invitation to address your annual convention in October. Unfortunately, I am unable to accept your thoughtful invitation as I will be overseas during that time.
+You may, perhaps, consider approaching Jenny Smith who is also an expert in stem cell research and who has just returned from a study program in France. I am sure her experience and knowledge would be of interest to your members. I am sure your conference will be a success and thank you for considering me.
+@Sincerely,
+@Albert Smith
+（http://www.samplelettersworld.com/sample-letters/rejection-letters/3169-decline-an-invitation-to-speak-or-perform-sample-letter-1）
+##Words and Expressions
+- 1. address [ə'dres] v. to give a speech 发言，演讲
+- 2. convention [kən'venʃən] n. conference or meeting 会议，大会` },
+
+        { pdf: 28, print: 20, content:
+`##Useful Sentence Patterns
+- 1. Thank you for your invitation to address your annual convention. 感谢您邀请我在年会上发言。
+- 2. I am sure your conference will be a success. 我相信，您的会议一定会取得圆满成功。
+##Sample 2
+Dear Ms. Hughes,
+Thank you for your invitation to speak at your upcoming public works conference on November 8. I am sorry, but I must decline. I have a board meeting that day, and given the critical nature of our agenda, I am afraid I would not make it to the Regency.
+If you have not yet considered an alternative speaker, I would suggest you give Elizabeth Forestall a call. She is extremely well-versed in matters of public works legalities—my firm has used her as an independent consultant on a number of occasions. Moreover, I know from first-hand experience that she gives thought-provoking, factually accurate presentations. Her number is 583-7952.
+I wish you well on your conference, and regret that I cannot be a part of it.
+@Sincerely,
+@Lily Ong
+（http://www.bizdocx.com/public-relations/invitations/declining-invitation-to-speak/）
+##Words and Expressions
+- 1. public works 市政工程，公共建筑工程
+- 2. given ['givən] prep. take... into consideration 考虑到
+- 3. first-hand experience 亲身经历` },
+
+        { pdf: 29, print: 21, content:
+`##Useful Sentence Patterns
+- 1. Thank you for your invitation to speak at your upcoming... conference. 感谢您邀请我在……会议上发言。
+- 2. I wish you well on your conference, and regret that I cannot be a part of it. 我衷心祝愿会议取得圆满成功，并为不能参加会议而表示遗憾。
+##Exercise
+- 1. Directions: Fill in the blanks in English based on the information given in the brackets.
+Dear Mrs. Esteban,
+I was __________（①很高兴应邀）to speak on breaking into publishing at your upcoming Writer's Conference. __________（②遗憾的是）, I will be in Missoula, Montana that weekend, on a book tour.
+I'm sure you know how much I respect your organization and the work it does. I want you to know __________（③我很愿意下一次做演讲）, at a monthly meeting, or a non-fiction __________（④研讨会）, or whenever you feel it would be appropriate. __________（⑤祝您万事如意，会议成功）.
+@Yours Truly,
+（http://www.bizdocx.com/public-relations/invitations/declining-invitation-to-speak/）
+- 2. Directions: Translate the following into English.
+@谢绝邀请函的回复
+尊敬的沙姆森教授：
+非常感谢您 2011 年 12 月 29 日的来信，邀请我参加并主持将` },
+
+        { pdf: 30, print: 22, content:
+`于 2012 年 3 月 24–25 日在美国西雅图举行的第 7 届国际经济与可持续发展国际会议。
+遗憾的是，因我今年夏天身体一直不好，不能接受您的邀请。医生强烈建议我近期不宜长途旅行。
+我很遗憾错过这次机会，不能与您以及国际经济与可持续发展的诸位同仁见面、交流。
+祝愿大会获得圆满成功！
+@谨上
+- 3. Writing
+>Directions: Study the samples in this Unit or refer to a sample in the relevant website and write a letter to decline to speak at the conference in your academic field.
+##Supplementary Reading
+Dear Mr. Letterman,
+Thank you for your invitation to do three interactive sessions on desktop publishing at your October 3 training conference. As much as I enjoy teaching people how to use such programs, I am afraid I must decline. My daughter is getting married that weekend, and is expecting me to walk her down the aisle!
+Bruce Kerr is an associate of mine, and he frequently teaches such classes. You may want to get in touch with him. I'm not sure of his home number but I do know he works in the computing division at CitiCorp. He is a true professional, and your students would no doubt learn a lot from him.
+Good luck with your conference!
+@Cordially,` },
+
+        { pdf: 31, print: 23, content:
+`@Mary Smith
+（http://www.bizdocx.com/public-relations/invitations/declining-invitation-to-speak/）
+##Words and Expressions
+- 1. interactive session 互动环节
+- 2. walk her down the aisle 结婚，走红毯
+- 3. CitiCorp [sitikɔːp] n. 花旗银行，花旗公司
+##Useful Sentence Patterns
+- 1. As much as I enjoy teaching people how to use such programs, I am afraid I must decline. 我非常乐意指导学员使用这些程序，但我没法接受您的邀请。
+- 2. Good luck with your conference! 衷心祝愿培训会取得圆满成功！
+##References
+- 1. http://www.samplelettersworld.com/sample-letters/rejection-letters/3169-decline-an-invitation-to-speak-or-perform-sample-letter-1
+- 2. http://www.bizdocx.com/public-relations/invitations/declining-invitation-to-speak/
+- 3. http://hi.baidu.com/%D0%A1%B5%B6%B0%CD%C5%AE/blog/item/46073a9876bb5b006e068c8c.html
+- 4. http://hi.baidu.com/%D0%A1%B5%B6%B0%CD%C5%AE/blog/item/46073a9876bb5b006e068c8c.html
+- 5. 有道词典　http://dict.youdao.com/
+- 6. 百度词典　http://dict.baidu.com/` }
       ]
     }
   ]
