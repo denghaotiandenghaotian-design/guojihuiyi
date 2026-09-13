@@ -1,0 +1,5 @@
+.workbuddy/
+*.genie
+_test_bi.js
+_check_bi.js
+_bi_result.txt

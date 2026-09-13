@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>国际学术会议英语与跨文化交流 · 在线学习系统</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="app">
+  <!-- 侧边栏 -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="logo">会</div>
+      <div>
+        <div class="t">国际会议英语</div>
+        <div class="s">跨文化交际学习系统</div>
+      </div>
+    </div>
+    <nav class="nav-group" id="nav"></nav>
+    <div class="foot">骆洪《国际学术会议英语与跨文化交流》<br>研究生教学用书 · 配套学习系统</div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <!-- 主区 -->
+  <div class="main">
+    <div class="topbar">
+      <button class="mobile-menu" id="menuBtn" aria-label="菜单">☰</button>
+      <div>
+        <h1 id="viewTitle">仪表盘</h1>
+        <div class="crumb" id="crumb">学习概览</div>
+      </div>
+      <div class="spacer"></div>
+    </div>
+    <div class="content" id="content"></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<!-- 数据层（顺序：知识 → 题目） -->
+<script src="data/knowledge.js"></script>
+<script src="data/questions.js"></script>
+<script src="data/english_originals.js"></script>
+<script src="data/exercises.js"></script>
+<script src="data/memory_aids.js"></script>
+<!-- 渲染层 -->
+<script src="assets/js/mindmap.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
