@@ -273,7 +273,7 @@
 
     const qt=el("div","section-title");qt.innerHTML=`<span class="bar"></span>快速入口`;c.appendChild(qt);
     const grid=el("div","grid cols-3");
-    [["知识点学习","knowledge","📚"],["思维导图","mindmap","🧠"],["课本习题","exercises","📖"],["双语对照","bilingual","📜"],["主观题","subjective","✍️"],["记忆背诵","memory","🔑"],["模拟题库","mock","📝"],["网络真题","real","🌐"],["错题本","wrong","⚠️"],["复习计划","review","🔁"]].forEach(([t,v,ic])=>{
+    [["知识点学习","knowledge","📚"],["思维导图","mindmap","🧠"],["课本习题","exercises","📖"],["双语对照","bilingual","📜"],["主观题","subjective","✍️"],["记忆背诵","memory","🔑"],["全文阅读","fulltext","📄"],["模拟题库","mock","📝"],["网络真题","real","🌐"],["错题本","wrong","⚠️"],["复习计划","review","🔁"]].forEach(([t,v,ic])=>{
       const card=el("div","unit-card");card.style.cursor="pointer";
       card.innerHTML=`<div class="uc-top"><div class="uc-title">${ic} ${t}</div></div>`;
       card.addEventListener("click",()=>navigate(v));grid.appendChild(card);
@@ -697,6 +697,77 @@
     });
   }
 
+  /* ---------- 视图：全文阅读（扫描版逐页校录） ---------- */
+  function ftBlocks(content){
+    const blocks=[];
+    content.split("\n").forEach(raw=>{
+      const line=raw.replace(/\s+$/,"");
+      if(!line)return;
+      if(line.startsWith("##"))blocks.push({t:"h4",v:line.slice(2)});
+      else if(line.startsWith("#"))blocks.push({t:"h3",v:line.slice(1)});
+      else if(line.startsWith("@"))blocks.push({t:"center",v:line.slice(1)});
+      else if(line.startsWith(">"))blocks.push({t:"note",v:line.slice(1)});
+      else if(line.startsWith("- "))blocks.push({t:"li",v:line.slice(2)});
+      else blocks.push({t:"p",v:line});
+    });
+    return blocks;
+  }
+  function renderFT(content,parent){
+    let ul=null;
+    ftBlocks(content).forEach(b=>{
+      if(b.t==="li"){
+        if(!ul){ul=el("ul","ft-ul");parent.appendChild(ul);}
+        ul.appendChild(el("li",null,esc(b.v)));return;
+      }
+      ul=null;
+      if(b.t==="h3")parent.appendChild(el("h3","ft-h3",esc(b.v)));
+      else if(b.t==="h4")parent.appendChild(el("h4","ft-h4",esc(b.v)));
+      else if(b.t==="center")parent.appendChild(el("div","ft-center",esc(b.v)));
+      else if(b.t==="note")parent.appendChild(el("div","ft-note",esc(b.v)));
+      else parent.appendChild(el("p","ft-p",esc(b.v)));
+    });
+  }
+  function viewFulltext(param){
+    const c=$("#content");c.innerHTML="";
+    const M=FULLTEXT.meta;
+    if(param){
+      const sec=FULLTEXT.sections.find(s=>s.id===param);
+      if(!sec){viewFulltext();return;}
+      const head=el("div","kp-head");
+      head.innerHTML=`<div class="tag">${esc(sec.part||"辅文")}　${esc(sec.unit||"")}</div>
+        <h2>${esc(sec.title_en||sec.title_cn)}</h2>
+        <div class="sub">${esc(sec.title_cn)}　·　共 ${sec.pages.length} 页（原书第 ${sec.pages[0].pdf}–${sec.pages[sec.pages.length-1].pdf} 页）</div>`;
+      c.appendChild(head);
+      const back=el("button","btn","← 返回全文目录");back.style.margin="0 0 14px";
+      back.addEventListener("click",()=>viewFulltext());c.appendChild(back);
+      const body=el("div","ft-doc");
+      sec.pages.forEach(pg=>{
+        const page=el("div","ft-page"+(pg.cover?" ft-cover":""));
+        page.appendChild(el("div","ft-pagemark",(pg.print!=null?("p. "+pg.print+"　"):"")+"（PDF "+pg.pdf+"）"));
+        renderFT(pg.content,page);
+        body.appendChild(page);
+      });
+      c.appendChild(body);
+      return;
+    }
+    const t=el("div","kp-head");
+    t.innerHTML=`<div class="tag">全文录入 · 逐页校录</div><h2>${esc(M.title_cn)}</h2>
+      <div class="sub">${esc(M.title_en)}</div>
+      <div class="sub">${esc(M.author)}　·　${esc(M.publisher)}　·　ISBN ${esc(M.isbn)}　·　${esc(M.edition)}</div>
+      <div class="sub">原书为扫描版 PDF（无文字层，共 ${M.total_pages} 页），本模块逐页人工校录。<b>当前已录入 ${M.transcribed_pages} 页</b>（封面 · 辅文 · 目录 · Unit 1 · Unit 2），其余单元陆续补齐。</div>`;
+    c.appendChild(t);
+    FULLTEXT.sections.forEach(sec=>{
+      const card=el("div","unit-card");card.style.cursor="pointer";
+      card.innerHTML=`<div class="uc-top"><div class="uc-id">${esc(sec.part||"辅文")}　${esc(sec.unit||"")}</div><span class="chip">${sec.pages.length} 页</span></div>
+        <div class="uc-title">${esc(sec.title_en||sec.title_cn)}</div>
+        <div class="uc-sum">${esc(sec.title_cn)}</div>`;
+      card.addEventListener("click",()=>viewFulltext(sec.id));c.appendChild(card);
+    });
+    const wait=el("div","ft-wait");
+    wait.innerHTML=`<b>待续录入：</b>Unit 3–13（第一部分）· Part II 跨文化交际（第 166–195 页）· Part III 范文中文译文与练习答案（第 196–276 页）· 后记（第 277 页）。原书共 ${M.total_pages} 页。`;
+    c.appendChild(wait);
+  }
+
   /* ---------- 导航 ---------- */
   const VIEWS={
     dashboard:{t:"仪表盘",c:"学习概览",fn:viewDashboard},
@@ -709,6 +780,7 @@
     bilingual:{t:"双语对照",c:"原文同步翻译",fn:viewBilingual},
     subjective:{t:"主观题",c:"简答·论述·写作",fn:viewSubjective},
     memory:{t:"记忆背诵",c:"要点·口诀·框架",fn:viewMemory},
+    fulltext:{t:"全文阅读",c:"扫描版逐页校录",fn:null},
     real:{t:"网络真题",c:"论坛/文库真题整合",fn:viewReal},
     wrong:{t:"错题本",c:"我的错题",fn:viewWrong}
   };
@@ -720,6 +792,7 @@
     if(view==="kp")viewKP(param);
     else if(view==="exercises")viewExercises(param);
     else if(view==="bilingual")viewBilingual(param);
+    else if(view==="fulltext")viewFulltext(param);
     else if(v.fn)v.fn();
     $("#sidebar").classList.remove("open");$("#scrim").classList.remove("show");
     window.scrollTo(0,0);
@@ -728,7 +801,7 @@
     const nav=$("#nav");nav.innerHTML="";
     [["dashboard","🏠","仪表盘"],["knowledge","📚","知识点"],["mindmap","🧠","思维导图"],
      ["exercises","📖","课本习题"],["bilingual","📜","双语对照"],["subjective","✍️","主观题"],["memory","🔑","记忆背诵"],
-     ["review","🔁","复习计划"],["mock","📝","模拟题库"],["real","🌐","网络真题"],["wrong","⚠️","错题本"]].forEach(([v,ic,t])=>{
+     ["fulltext","📄","全文阅读"],["review","🔁","复习计划"],["mock","📝","模拟题库"],["real","🌐","网络真题"],["wrong","⚠️","错题本"]].forEach(([v,ic,t])=>{
       const b=el("button","nav-item"+(cur.view===v?" active":""),"");
       b.innerHTML=`<span class="ic">${ic}</span>${t}`;
       b.addEventListener("click",()=>navigate(v));

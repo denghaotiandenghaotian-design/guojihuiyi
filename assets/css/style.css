@@ -256,3 +256,27 @@ button{font-family:inherit;cursor:pointer}
 }
 .scrim{display:none}
 .scrim.show{display:block}
+
+/* ---- 全文阅读（扫描版逐页校录） ---- */
+.ft-doc{display:flex;flex-direction:column;gap:18px}
+.ft-page{position:relative;background:var(--bg);border:1px solid var(--border);border-radius:12px;
+  padding:26px 30px 30px;box-shadow:var(--shadow);max-width:820px}
+.ft-page.ft-cover{padding:54px 30px;text-align:center}
+.ft-pagemark{font-size:11px;color:var(--text-dim);letter-spacing:.04em;margin-bottom:14px;
+  padding-bottom:8px;border-bottom:1px dashed var(--border)}
+.ft-h3{font-size:19px;font-weight:700;margin:6px 0 12px;color:var(--text)}
+.ft-h4{font-size:15px;font-weight:700;margin:18px 0 8px;color:var(--accent)}
+.ft-p{margin:0 0 11px;line-height:1.85;color:var(--text-soft);text-align:justify}
+.ft-center{margin:3px 0;color:var(--text);text-align:center;font-weight:500;line-height:1.9}
+.ft-page.ft-cover .ft-center:first-of-type{font-size:13px;letter-spacing:.28em;color:var(--text-dim);font-weight:600}
+.ft-page.ft-cover .ft-center{font-size:16px}
+.ft-note{margin:8px 0 12px;padding:8px 12px;background:var(--accent-soft);border-left:3px solid var(--accent);
+  border-radius:0 8px 8px 0;font-size:13px;color:var(--text-soft)}
+.ft-ul{margin:0 0 12px;padding-left:20px}
+.ft-ul li{margin:4px 0;line-height:1.75;color:var(--text-soft)}
+.ft-wait{margin-top:18px;padding:14px 16px;border:1px dashed var(--border-strong);border-radius:12px;
+  background:var(--bg-soft);font-size:13px;color:var(--text-dim);line-height:1.7}
+@media(max-width:760px){
+  .ft-page{padding:18px 16px 22px}
+  .ft-p{text-align:left}
+}
