@@ -276,6 +276,10 @@ button{font-family:inherit;cursor:pointer}
 .ft-ul li{margin:4px 0;line-height:1.75;color:var(--text-soft)}
 .ft-wait{margin-top:18px;padding:14px 16px;border:1px dashed var(--border-strong);border-radius:12px;
   background:var(--bg-soft);font-size:13px;color:var(--text-dim);line-height:1.7}
+.ft-proof{margin-top:12px;padding:11px 14px;border:1px solid var(--border);border-radius:10px;
+  background:var(--bg-soft);font-size:12.5px;line-height:1.85;color:var(--text-soft)}
+.chip-v{background:#eaf7ee;border-color:#bfe6cb;color:#1f7a3d}
+.chip-m{background:#fff6e5;border-color:#f0dcb0;color:#9a6b16}
 /* 全书原书影像阅读器 */
 .ft-scan-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0 10px}
 .ft-jump{width:80px;padding:6px 8px;border:1px solid var(--border-strong);border-radius:8px;font-size:13px}

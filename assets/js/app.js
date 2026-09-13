@@ -815,20 +815,22 @@
       return;
     }
     const t=el("div","kp-head");
-    t.innerHTML=`<div class="tag">全文录入 · 逐页校录</div><h2>${esc(M.title_cn)}</h2>
+    t.innerHTML=`<div class="tag">全书录入 · ${M.total_pages} 页</div><h2>${esc(M.title_cn)}</h2>
       <div class="sub">${esc(M.title_en)}</div>
       <div class="sub">${esc(M.author)}　·　${esc(M.publisher)}　·　ISBN ${esc(M.isbn)}　·　${esc(M.edition)}</div>
-      <div class="sub">原书为扫描版 PDF（无文字层，共 ${M.total_pages} 页），本模块逐页人工校录。<b>当前已录入 ${M.transcribed_pages} 页</b>（封面 · 辅文 · 目录 · Unit 1 · Unit 2），其余单元陆续补齐。</div>`;
+      <div class="sub">原书为扫描版 PDF（无文字层，共 ${M.total_pages} 页），现已<b>全书录入</b>：封面 · 辅文 · 目录 · Unit 1–13（第一部分）· Part II 跨文化交际 · Part III 范文中文译文与练习答案 · 后记。</div>
+      <div class="ft-proof"><span class="chip chip-v">人工校录 ${M.verified_pages} 页</span><span class="chip chip-m">机读整理 ${M.structured_pages} 页</span><br>第 1–60 页（辅文 · Unit 1–7）为逐字人工校录；第 61–278 页（Unit 8–13 · Part II · Part III · 后记）系扫描影像 OCR 识别后自动整理成文，个别字符（尤其音标、人名、网址）可能有误 —— <b>请以「🖼️ 全书原书影像」中的原书页面为准</b>。</div>`;
     c.appendChild(t);
-    FULLTEXT.sections.forEach(sec=>{
+    FULLTEXT.sections.forEach((sec,idx)=>{
+      const hand=idx<=7;
       const card=el("div","unit-card");card.style.cursor="pointer";
-      card.innerHTML=`<div class="uc-top"><div class="uc-id">${esc(sec.part||"辅文")}　${esc(sec.unit||"")}</div><span class="chip">${sec.pages.length} 页</span></div>
+      card.innerHTML=`<div class="uc-top"><div class="uc-id">${esc(sec.part||"辅文")}　${esc(sec.unit||"")}</div><span class="chip ${hand?"chip-v":"chip-m"}">${sec.pages.length} 页 · ${hand?"人工校录":"机读整理"}</span></div>
         <div class="uc-title">${esc(sec.title_en||sec.title_cn)}</div>
         <div class="uc-sum">${esc(sec.title_cn)}</div>`;
       card.addEventListener("click",()=>viewFulltext(sec.id));c.appendChild(card);
     });
     const wait=el("div","ft-wait");
-    wait.innerHTML=`<b>待续录入：</b>Unit 3–13（第一部分）· Part II 跨文化交际（第 166–195 页）· Part III 范文中文译文与练习答案（第 196–276 页）· 后记（第 277 页）。原书共 ${M.total_pages} 页。`;
+    wait.innerHTML=`<b>使用说明：</b>全书 ${M.total_pages} 页已全部录入，可逐页对照阅读；任何一处文字与影像不一致时，一律以「🖼️ 全书原书影像」中的原书页面为准。`;
     c.appendChild(wait);
   }
 
