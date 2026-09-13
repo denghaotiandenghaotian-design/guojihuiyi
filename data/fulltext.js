@@ -20,7 +20,7 @@ const FULLTEXT = {
     funding: "云南大学研究生精品课程建设项目资助",
     cip: "中国版本图书馆CIP数据核字（2012）第136330号",
     total_pages: 286,
-    transcribed_pages: 31
+    transcribed_pages: 47
   },
 
   /* 结构化目录（用于侧栏 / 目录导航） */
@@ -553,6 +553,263 @@ Good luck with your conference!
 - 4. http://hi.baidu.com/%D0%A1%B5%B6%B0%CD%C5%AE/blog/item/46073a9876bb5b006e068c8c.html
 - 5. 有道词典　http://dict.youdao.com/
 - 6. 百度词典　http://dict.baidu.com/` }
+      ]
+    },
+
+    {
+      id: "p1-u5",
+      part: "Part I",
+      unit: "Unit 5",
+      title_en: "Call for Papers",
+      title_cn: "征稿启事",
+      print_start: 24,
+      pages: [
+        { pdf: 32, print: 24, content:
+`#Unit 5　Call for Papers
+##Sample Study
+>Directions: Read the following samples and learn to write a call for papers submitted to a conference concerning your current research field.
+##Sample 1
+@LBM 2011—The Fourth International Symposium
+@on Languages in Biology and Medicine（LBM 2011）
+@Website www.wseas.org
+@Category LBM 2011
+@Deadline: September 03, 2011 | When: December 14, 2011 – December 15, 2011
+@Where: Singapore / Singapore
+@Updated: 22:54:11 Apr. 27, 2011 GMT+9
+@Call For Papers—CFP
+@The Fourth International Symposium on Languages in Biology and Medicine（LBM 2011）
+@Nanyang Technological University, Singapore
+@14th and 15th December, 2011
+##CALL FOR PAPERS
+The International Symposium on Languages in Biology and Medicine (LBM) is a biannual interdisciplinary forum that brings together researchers in biology, chemistry, medicine, public health and informa-` },
+
+        { pdf: 33, print: 25, content:
+`tics to discuss and exploit cutting edge language technologies.
+Language, in its many forms, is the universal means to represent, convey, and question knowledge. Although knowledge is still widely communicated through natural languages, biology and medicine also use a number of other means of communication: sequences, ontologies, chemical and mathematical formulae, modelling languages, graphs, images, etc. Associated technologies such as text mining and information extraction, systems modelling, information visualization, semantic indexing, and semantic querying are key for advancing biomedical research and healthcare provision. The automation and integration of all these solutions will enhance our understanding and discovery of knowledge in biology and medicine. As all the individual technologies are constantly being challenged by user demands and complexities in an interdisciplinary research environment, the LBM symposium series aims to offer a forum for synergistic interactions between them.
+The Fourth LBM symposium (LBM 2011) will be held at the Nanyang Technological University (NTU), Singapore as a pre-conference workshop of the 25th Pacific Asia Conference on Language, Information and Computation (PACLIC 25), on December 14th and 15th, 2011. We invite papers about any aspect of language use in biology, chemistry, medicine, public health, pharmacology and related areas. We welcome papers on natural language processing, ontology engineering and matching, bio-sequence analysis, systems modelling, database systems, logical inference, information visualization, and image retrieval. This year we particularly encourage submissions focusing on languages in health-care and chemistry to reflect recent research trends in translational medicine and clinical and chemical informatics. The topics include, but are not limited to:` },
+
+        { pdf: 34, print: 26, content:
+`- • Text mining, retrieval, and management
+- • Semantic indexing and querying
+- • Ontology construction, mapping, integration, and maintenance
+- • Sequence analysis using language processing techniques
+- • Data modelling and annotation languages
+- • Information integration and visualization
+- • Languages for health-care and chemistry
+##Important Dates
+Call for Papers: June 3, 2011
+Paper Submission Deadline: September 3, 2011
+Poster Paper Submission Deadline: September 16, 2011
+Paper and Poster Acceptance Notification: September 30, 2011
+Camera Ready Version Due: October 15, 2011
+Symposium Dates: December 14–15, 2011
+LBM 2011 will offer a diversity of high quality presentations: keynote and invited talks, research presentations (short and long papers) with two special highlight tracks on languages in health-care and chemistry, poster presentations and a panel discussion. Research presentations will be selected by peer review from the Programme Committee, and the accepted papers will be distributed to participants in a digital form during the Symposium, together with the accepted papers of the PACLIC 25. We will also have best paper awards.
+We intend to publish the best submissions in special issues of peer reviewed journals. We have selected the Journal of Bioinformatics and Computational Biology (JBCB) for publications with a strong focus on biomedical informatics, the Journal of Biomedical Semantics (JBMS) for publications with a strong focus on semantic resources and their use` },
+
+        { pdf: 35, print: 27, content:
+`in applications, and the Journal of Computing Science and Engineering (JCSE) for publications with a strong focus on computational and engineering issues.
+@General Chairs
+@Jong C. Park and Limsoon Wong
+@Program Chairs
+@Goran Nenadic and Jung-jae Kim
+（http://conference.researchbib.com/?eventid=11277）
+##Words and Expressions
+- 1. ontology [ɔn'tɔlədʒi] n. a branch of philosophy that deals with the nature of existence 本体论；存在论；实体论
+- 2. biomedical [baiəu'medikəl] adj. relating to how biology affects medicine 生物医学的
+- 3. synergistic [ˌsinə'dʒistik] adj. the extra energy, power, success, etc. that is achieved by two or more people or companies working together, instead of on their own 协同的；协作的，协同作用的
+- 4. retrieval [ri'triːvəl] n. the process of getting back information that is stored on a computer 检索
+- 5. with two special highlight tracks on... 特别突出……两方面的内容
+- 6. with a strong focus on... 特别强调……
+##Useful Sentence Patterns
+- 1. a forum that brings together researchers in... to discuss and exploit... 论坛云集……领域的专家来探讨……
+- 2. to enhance our understanding and discovery of knowledge in... 促进我们对……知识的进一步理解
+- 3. to offer a forum for synergistic interactions between... 为……` },
+
+        { pdf: 36, print: 28, content:
+`和……的协作交流提供一个平台
+- 4. We will also have best paper awards. 我们将评选出最佳论文。
+- 5. The topics include, but are not limited to... 请按（但并非局限于）以下选题投稿。
+##Sample 2
+@ALTA 2011—9th Australasian Language Technology Workshop
+@Category ALTA 2011
+@Deadline: September 19, 2011
+@When: December 01, 2011 – December 02, 2011
+@Where: Canberra / Australia
+@Updated: 13:51:50 Jul. 31, 2011 GMT+9
+@Call For Papers—CFP
+@9th Australasian Language Technology Workshop（ALTA 2011）
+@1st and 2nd December 2011, Canberra, Australia
+@http://alta.asn.au/events/alta2011
+##OVERVIEW
+This year, the Australasian Language Technology Workshop (ALTA) will be held at the Australian National University (ANU) in Canberra on Thursday 1st and Friday 2nd of December 2011. This event will be the ninth annual installment of the ALTA Workshop in its most-recent incarnation, and the continuation of an annual workshop series that has existed under various guises since the early 90s.
+The goals of the ALTA workshop are:
+- • to bring together the growing Language Technology (LT) com-` },
+
+        { pdf: 37, print: 29, content:
+`munity in Australia and New Zealand and encourage interactions;
+- • to encourage interactions and collaboration within this community and with the wider international LT community;
+- • to foster interaction between academic and industrial researchers, to encourage dissemination of research results;
+- • to provide a forum for students and young researchers to present their research;
+- • to facilitate the discussion of new and ongoing research and projects;
+- • to provide an opportunity for the broader artificial intelligence community to become aware of local LT research; and, finally,
+- • to increase visibility of LT research in Australia, New Zealand and overseas.
+##TOPICS
+We invite the submission of papers on original and unpublished research on all aspects of natural language processing, including, but not limited to:
+- • phonology, morphology, syntax, semantics, pragmatics, and discourse;
+- • speech understanding and generation;
+- • interpreting spoken and written language;
+- • natural language generation;
+- • linguistic, mathematical, and psychological models of language;
+- • nlp-based information extraction and retrieval;
+- • corpus-based and statistical language modelling;
+- • machine translation and translation aids;
+- ……` },
+
+        { pdf: 38, print: 30, content:
+`We welcome submissions on any topic that is of interest to the LT community, and particularly encourage submissions that broaden the scope of our community through the consideration of practical LT applications and through multi-disciplinary research. We also specifically encourage submissions from industry.
+##SUBMISSION FORMAT
+All submissions should follow the ACL style guidelines and must be in PDF format.
+Full paper submissions should follow the two-column format of ACL proceedings without exceeding eight (8) pages of content plus one extra page for references. Accepted full papers will be presented orally at the workshop.
+Short paper submissions should also follow the two-column format of ACL proceedings without exceeding four (4) pages of content plus one extra page for references. Accepted short papers will be presented as posters at the workshop.
+Note that full paper submissions can be accepted as short papers as determined by the program committee. Full papers will be distinguished from short papers in the proceedings.
+Reviewing of papers will be double-blind. Therefore, the paper must not include the authors' names and affiliations. Furthermore, self-references that reveal the author's identity, e.g., “We previously showed (Smith, 1991)...” must be avoided. Instead, use citations such as “Smith (1991) previously showed...”
+We strongly recommend the use of ACL LaTeX style files or Microsoft Word Style files tailored for this year's conference. The style files and example documents are available from the workshop website. We reserve the right to reject submissions that do not conform to these styles` },
+
+        { pdf: 39, print: 31, content:
+`including font and page size restrictions.
+If we cannot print your PDF file by the submission date it will be rejected without being reviewed. Therefore you are encouraged to send an early version with the typographical complexity of your final intended version so that we can check it is printable. Detailed directions for submission will be made available at the workshop website. Contact the organisers for any questions regarding this process.
+##PROCEEDINGS
+The full proceedings volume will have an ISSN and will be published online on the ACL anthology website as well as the website of the Australasian Language Technology Association (ALTA).
+##IMPORTANT DATES
+- • Submissions deadline: Monday 19th September 2011
+- • Accept/reject: Monday 10th October 2011
+- • Final camera-ready copy: Monday 31st October 2011
+- • ALTA Workshop: Thursday 1st and Friday 2nd December 2011
+##WORKSHOP CO-CHAIRS
+- • David Martinez (NICTA Victoria Research Lab and University of Melbourne)
+- • Diego Molla (Macquarie University)
+##PROGRAM COMMITTEE
+- • Timothy Baldwin (University of Melbourne)
+- • Steven Bird (University of Melbourne)
+- ……
+- • Simon Zwarts (Google, Sydney)
+##WORKSHOP LOCAL ORGANISERS
+- • Hanna Suominen (NICTA Canberra Research Lab and ANU)
+- • Wray Buntine (NICTA Canberra Research Lab and ANU)
+##ENQUIRIES` },
+
+        { pdf: 40, print: 32, content:
+`The Australasian Language Technology Workshop is being organised by ALTA, the Australasian Language Technology Association. For any comments or questions about the workshop please contact the workshop organisers (workshop@alta.asn.au).
+（http://conference.researchbib.com/?eventid=13491）
+##Words and Expressions
+- 1. affiliation [əfili'eiʃən] n. 隶属关系；（文中指中国人常讲的）单位
+- 2. anthology [æn'θɔlədʒi] n. a collection of poems, stories, etc. that have been written by different people and published together in a book （诗、文、曲、画等的）选集
+- 3. with a strong focus on... 重点强调……
+##Useful Sentence Patterns
+- 1. We welcome submissions on any topic that is of interest to... 欢迎大家积极提交……感兴趣的论文。
+- 2. Detailed directions for submission will be made available at the workshop website. 研讨会网站将刊登相关论文提交细则。
+##Exercise
+- 1. Directions: Fill in the blanks in English based on the information given in the brackets.
+@SOCA 2011—2011 IEEE International Conference
+@on Service-Oriented Computing and Applications（SOCA）
+@Call for Papers—CFP
+The IEEE International Conference on Service Oriented Computing & Applications（SOCA 2011）①__________（为……提供国际平` },
+
+        { pdf: 41, print: 33, content:
+`台）researchers from multiple disciplines to②__________（交流与分享）their experiences, ideas, and latest research results on all aspects of service-oriented computing. Papers from industry in services science are also welcome, as SOCA 2011 will have a dedicated industry track. The program of SOCA 2011 will③__________（包括）invited talks, technical paper presentations, tutorials, industry sessions, workshops, and panel discussions. SOCA is an④__________（年会）of the IEEE Technical Committee on Business Informatics and Systems（TCBIS）.
+SOCA 2011 will take place December 12–14, 2011 at the Campus of University of California, Irvine. It will⑤__________（与……同时进行）the 2011 International Conference on Knowledge Science, Engineering and Management（KSEM）. Furthermore, two workshops will be part of this joint conference: the Fourth IEEE International Workshop on Real-Time Service-Oriented Architecture and Applications（RTSOAA 2011）and the International Workshop on Knowledge and Service Technology for Life, Environment, and Sustainability（KASTLES 2011）.
+All accepted papers will appear in the Proceedings of SOCA 2011 and⑥__________（收入）in IEEE Xplore and indexed by EI. The best papers from the proceedings will be selected for publication in the Springer Journal on Service-Oriented Computing and Applications（SOCA）as well as special issues in international journals to be announced.
+Authors interested in participating in SOCA 2011 are invited to⑦__________（提交带有原创性的论文）（limited to 8 IEEE style pages）until 4th September 2011. ⑧__________（其他细则）on the submission process are available in the sections on Paper Submission and Important Dates.
+（http://conference.researchbib.com/?eventid=11981）` },
+
+        { pdf: 42, print: 34, content:
+`- 2. Directions: Translate the following into English.
+企业和企业家研究年度峰会（ASBES），是一个传统的有关企业和企业家研究的会议，欢迎来自世界各地、具有广泛研究兴趣的人士参加。企业和企业家研究涉及众多领域，本次会议探讨的话题集中在社会责任感、职业伦理和管理三个方面。在近期发生的金融危机中，企业伦理、社会和环境的可持续性和组织的凝聚力、员工和管理人员的薪酬公平等问题变得较为突出。
+本次会议旨在展示和探讨新的研究成果，尤其是在社会责任和企业伦理方面有助于共享新的理论、方法和经验方面的知识，有助于更好地了解企业和企业活动的新成果。探讨有关跨文化对话和多元文化社会中的企业等问题的论文则更受欢迎。
+欢迎提交涉及企业和企业家精神各个领域的论文，同时也欢迎其他学科的学者参会，希望他们能够从不同的视角针对会议主题发表看法。本次会议将集中探讨以下话题：
+- 1. 商法与伦理
+- 2. 企业家精神
+- 3. 企业调查方法和指导
+- 4. 成长与革新
+- 5. 审计和公司管理
+- ……
+以及任何其他与企业和企业家精神相关的研究话题，诸如从法律、金融、会计、人力资源、银行学、信息技术和宗教等视角展开的研究。
+- 3. Writing
+>Directions: Study the samples in this Unit or refer to a sample in the relevant website and write a call for papers for a conference in your academic field.` },
+
+        { pdf: 43, print: 35, content:
+`##Supplementary Reading
+@CALL FOR PAPERS—LAW, SOCIOLOGY, POLITICAL SCIENCE, 2011—INDIAN JOURNAL OF HUMANITIES
+@Website http://ijhumanities.blogspot.com
+@Category CALL FOR PAPERS
+@Deadline: October 09, 2011 | When: October 09, 2011 – October 09, 2011
+@Where: Agartala / India
+@Updated: 14:50:43 Jun. 17, 2011 GMT+9
+@Call For Papers—CFP
+##GUIDELINES FOR CONTRIBUTORS
+- 1. The manuscript should be a length of less than 5000 words, neatly typed in single space, on A-4 size papers. It should be submitted in duplicate and the first page should carry only the title of the paper, author(s)' name(s), designations, official address, phone/fax numbers and e-mail addresses.
+- 2. Abstract: Each manuscript should carry an abstract of about 150–200 words.
+- 3. Key words: Maximum five–six keywords to be indicated.
+- 4. Introduction: A short introduction of the research problem followed by a brief review of literature and objective of the research. Describe the materials used in the experiments, year of experimentation, site etc. Describe the methods employed for collection of data in short.
+- 5. Results and Discussion: This segment should focus on the fulfillment of stated objectives as given in the introduction. It should contain` },
+
+        { pdf: 44, print: 36, content:
+`the findings presented in the form of tables, figures and photographs.
+- 6. Concluding Observations: It deals with objectives of the paper.
+- 7. Acknowledgments (where applicable).
+- 8. End notes: All notes should be indicated by serial numbers in the text and detailed references should be given at the end of the paper.
+- 9. The following style of reference may be strictly followed:
+- （a）In case of journal: author's last name, initials, year of publication, name of the paper, name of the journal (italic), volume number, issue number and page number.
+- （b）In case of a book: author's last name, initials, year of publication, title of the book (italic), name of publisher, place of publication and page numbers.
+- （c）In case of an edited book: author's last name, initials, year of publication, name of the editor, title of the book (italic), name of publisher, place of publication and page numbers.
+- （d）In case of institution/Govt. report: full name of the institution/ministry, year of publication, place of publication.
+- （e）In case of online document: author's last name, initials, year of publications, title of the paper, website, and date of retrieve.
+- 10. British English spelling is to be used through the manuscript.
+- 11. English manuscripts must be in Times New Roman font size 11 and in single spacing.
+- 12. The tables and figures in the text should be centralized.
+- 13. The same data should not be presented in tables and figures both.
+- 14. Every contribution should be accompanied by a declaration that the article is original and has not been published or submitted elsewhere for publication.
+- 15. Every accepted article will be copy-edited. The editorial board` },
+
+        { pdf: 45, print: 37, content:
+`reserved the right to make necessary revisions to the text. Every author will receive one complimentary copy of the issue in which one's paper appears.
+Review System: Every research paper will be reviewed by two members of peer review committee. The criteria used for acceptance of research papers are contemporary relevance, contribution to knowledge, clear and logical analysis, fairly good English and sound methodology of research papers. The Editor reserves the right to reject any manuscript as unsuitable in topic, style or form without requesting external review.
+Copy Rights: Acceptance of a manuscript for publication in the Journal shall automatically mean transfer of copyright to the editor. The Editorial Board takes no responsibility for the fact or the opinion expressed in the article, it rests entirely with the author(s) thereof.
+Printing Charge: As a result of highly printing charge every contributor will pay Rs. 500 as printing charge for each article.
+@For Any Enquiry:
+@Email: ijhindia11@gmail.com
+@Mobile No: 09856321179
+Common causes for the papers being rejected are:
+- 1. that they report a single small or incomplete experiment that makes a minor or uncertain contribution to new knowledge or understanding;
+- 2. that the data are statistically insignificant and/or do not support the claims being made;
+- 3. they are written so poorly, without references to these and the more detailed instructions for authors, that they are incomprehensible.
+>** Authors are requested to send their research articles strictly according to the format mentioned in the Guidelines to the Authors **
+（http://conference.researchbib.com/?eventid=12232）` },
+
+        { pdf: 46, print: 38, content:
+`##Words and Expressions
+- 1. duplicate ['djuːplikeit] to make an exact copy of something vt. 复制；使加倍 n. 副本；复制品 adj. 复制的；二重的
+- 2. initial [i'niʃəl] adj. happening at the beginning; first n. 词首大写字母最初的；字首的
+- 3. methodology [ˌmeθə'dɔlədʒi] n. a set of methods and principles used to perform a particular activity 方法学，方法论
+- 4. in case of... 万一……；假设……
+- 5. transfer of copyright to... 版权转让至……
+- 6. according to... 根据……
+##Useful Sentence Patterns
+- 1. The manuscript should be a length of less than... words. 论文总长不超过……字。
+- 2. Every research paper will be reviewed by two members of peer review committee. 每篇论文将由同行评审委员会的两名成员进行评审。
+- 3. Common causes for the papers being rejected are... 退稿多为以下原因……
+- 4. Authors are requested to send their research articles strictly according to the format mentioned in the Guidelines to the Authors. 每位作者需严格按照上述须知进行投稿。
+##References
+- 1. http://www.ourglocal.com/
+- 2. http://conference.researchbib.com/?eventid=11277
+- 3. http://conference.researchbib.com/?eventid=13491
+- 4. http://conference.researchbib.com/?eventid=11981
+- 5. http://conference.researchbib.com/?eventid=11406` },
+
+        { pdf: 47, print: 39, content:
+`- 6. http://conference.researchbib.com/?eventid=12232
+- 7. 有道词典　http://dict.youdao.com/
+- 8. Wehmeier, Sally. Oxford Advanced Learner's English-Chinese Dictionary (Sixth edition). Beijing: The Commercial Press, 2004.` }
       ]
     }
   ]
