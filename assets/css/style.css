@@ -296,3 +296,16 @@ button{font-family:inherit;cursor:pointer}
   .ft-page{padding:18px 16px 22px}
   .ft-p{text-align:left}
 }
+/* 全文阅读·中英对照（左 EN / 右 中文 并排） */
+.bi-ft-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;margin-top:8px}
+.bi-ft-en{border-left:3px solid #2b6cb0;padding-left:16px}
+.bi-ft-cn{border-left:3px solid #6c5ce7;padding-left:16px}
+.bi-ft-lang{font-size:10px;font-weight:700;letter-spacing:.06em;padding:2px 9px;border-radius:6px;color:#fff;display:inline-block;margin-bottom:10px}
+.bi-en-lang{background:#2b6cb0}
+.bi-zh-lang{background:#6c5ce7}
+.bi-onlycn .bi-oc-note{font-size:12px;color:var(--text-dim);margin-bottom:10px;padding:6px 10px;background:var(--bg-soft);border-radius:8px;border:1px dashed var(--border)}
+@media(max-width:760px){
+  .bi-ft-cols{grid-template-columns:1fr;gap:16px 0}
+  .bi-ft-en{border-left:none;border-top:3px solid #2b6cb0;padding-left:0;padding-top:14px}
+  .bi-ft-cn{border-left:none;border-top:3px solid #6c5ce7;padding-left:0;padding-top:14px}
+}

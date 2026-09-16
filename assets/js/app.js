@@ -727,10 +727,34 @@
       else parent.appendChild(el("p","ft-p",esc(b.v)));
     });
   }
+  /* 中英对照单页：左 EN 原文 / 右 中文译文（并排）；无译文页（Part III/后记）单栏照录中文 */
+  function renderBilingualPage(pg,parent){
+    const page=el("div","ft-page"+(pg.cover?" ft-cover":""));
+    page.appendChild(el("div","ft-pagemark",(pg.print!=null?("p. "+pg.print+"　"):"")+"（PDF "+pg.pdf+"）"));
+    const cn=(typeof FULLTEXT_CN!=="undefined")?FULLTEXT_CN[pg.pdf]:null;
+    if(!cn){
+      const only=el("div","bi-onlycn");
+      only.appendChild(el("div","bi-oc-note","本页为原书中文内容，无需对照翻译，照录如下："));
+      renderFT(pg.content,only);
+      page.appendChild(only);
+      parent.appendChild(page);
+      return;
+    }
+    const cols=el("div","bi-ft-cols");
+    const en=el("div","bi-ft-en");
+    en.appendChild(el("div","bi-ft-lang bi-en-lang","EN 原文"));
+    renderFT(pg.content,en);
+    const zh=el("div","bi-ft-cn");
+    zh.appendChild(el("div","bi-ft-lang bi-zh-lang","中文译文"));
+    renderFT(cn,zh);
+    cols.appendChild(en);cols.appendChild(zh);
+    page.appendChild(cols);
+    parent.appendChild(page);
+  }
   let ftMode="verified", ftPage=1, ftShowText=true;
   function ftModeBar(){
     const bar=el("div","ex-modebar");bar.style.marginBottom="12px";
-    [["verified","📖 精校文本"],["scan","🖼️ 全书原书影像"]].forEach(([v,label])=>{
+    [["verified","📖 精校文本"],["bilingual","🈶 中英对照"],["scan","🖼️ 全书原书影像"]].forEach(([v,label])=>{
       const b=el("button","btn sm"+(ftMode===v?" primary":""),label);
       b.addEventListener("click",()=>{ftMode=v;viewFulltext();});
       bar.appendChild(b);
@@ -806,10 +830,13 @@
       back.addEventListener("click",()=>viewFulltext());c.appendChild(back);
       const body=el("div","ft-doc");
       sec.pages.forEach(pg=>{
-        const page=el("div","ft-page"+(pg.cover?" ft-cover":""));
-        page.appendChild(el("div","ft-pagemark",(pg.print!=null?("p. "+pg.print+"　"):"")+"（PDF "+pg.pdf+"）"));
-        renderFT(pg.content,page);
-        body.appendChild(page);
+        if(ftMode==="bilingual")renderBilingualPage(pg,body);
+        else{
+          const page=el("div","ft-page"+(pg.cover?" ft-cover":""));
+          page.appendChild(el("div","ft-pagemark",(pg.print!=null?("p. "+pg.print+"　"):"")+"（PDF "+pg.pdf+"）"));
+          renderFT(pg.content,page);
+          body.appendChild(page);
+        }
       });
       c.appendChild(body);
       return;
@@ -821,6 +848,12 @@
       <div class="sub">原书为扫描版 PDF（无文字层，共 ${M.total_pages} 页），现已<b>全书录入</b>：封面 · 辅文 · 目录 · Unit 1–13（第一部分）· Part II 跨文化交际 · Part III 范文中文译文与练习答案 · 后记。</div>
       <div class="ft-proof"><span class="chip chip-v">人工校录 ${M.verified_pages} 页</span><span class="chip chip-m">机读整理 ${M.structured_pages} 页</span><br>第 1–60 页（辅文 · Unit 1–7）为逐字人工校录；第 61–278 页（Unit 8–13 · Part II · Part III · 后记）系扫描影像 OCR 识别后自动整理成文，个别字符（尤其音标、人名、网址）可能有误 —— <b>请以「🖼️ 全书原书影像」中的原书页面为准</b>。</div>`;
     c.appendChild(t);
+    if(ftMode==="bilingual"){
+      const hint=el("div","ft-wait");
+      const cov=(typeof FULLTEXT_CN_COVER!=="undefined")?`（PDF ${FULLTEXT_CN_COVER.min}–${FULLTEXT_CN_COVER.max} 已配中文译文）`:"";
+      hint.innerHTML=`<b>中英对照模式：</b>点击任意单元，将以「左 EN 原文 / 右 中文译文」并排对照方式阅读全文${cov}；Part III（范文中文译文与练习答案）及后记原书即为中文，将单栏照录、无需对照。任何文字与影像不一致时，以「🖼️ 全书原书影像」为准。`;
+      c.appendChild(hint);
+    }
     FULLTEXT.sections.forEach((sec,idx)=>{
       const hand=idx<=7;
       const card=el("div","unit-card");card.style.cursor="pointer";
