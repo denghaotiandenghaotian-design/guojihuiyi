@@ -273,7 +273,7 @@
 
     const qt=el("div","section-title");qt.innerHTML=`<span class="bar"></span>快速入口`;c.appendChild(qt);
     const grid=el("div","grid cols-3");
-    [["知识点学习","knowledge","📚"],["思维导图","mindmap","🧠"],["课本习题","exercises","📖"],["双语对照","bilingual","📜"],["主观题","subjective","✍️"],["记忆背诵","memory","🔑"],["全文阅读","fulltext","📄"],["模拟题库","mock","📝"],["网络真题","real","🌐"],["错题本","wrong","⚠️"],["复习计划","review","🔁"]].forEach(([t,v,ic])=>{
+    [["知识点学习","knowledge","📚"],["思维导图","mindmap","🧠"],["课本习题","exercises","📖"],["课后习题·答案","expdf","📑"],["双语对照","bilingual","📜"],["主观题","subjective","✍️"],["记忆背诵","memory","🔑"],["全文阅读","fulltext","📄"],["模拟题库","mock","📝"],["网络真题","real","🌐"],["错题本","wrong","⚠️"],["复习计划","review","🔁"]].forEach(([t,v,ic])=>{
       const card=el("div","unit-card");card.style.cursor="pointer";
       card.innerHTML=`<div class="uc-top"><div class="uc-title">${ic} ${t}</div></div>`;
       card.addEventListener("click",()=>navigate(v));grid.appendChild(card);
@@ -636,6 +636,53 @@
     });
   }
 
+  /* ---------- 视图：课后习题全集（课本原题 ↔ 标准答案 · Part III） ---------- */
+  function exNum(i){return "①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳"[i]||("("+(i+1)+")");}
+  function exPairTable(pairs){
+    const box=el("div","expt");
+    let h=`<div class="expt-h">填空答案配对表 · ${pairs.length} 空</div><table><thead><tr><th>题号</th><th>中文提示（题目）</th><th>标准答案（English）</th></tr></thead><tbody>`;
+    pairs.forEach((p,i)=>{h+=`<tr><td class="n">${exNum(i)}</td><td class="${/^（原书/.test(p[0])?'g':'z'}">${esc(p[0])}</td><td class="e">${esc(p[1])}</td></tr>`;});
+    box.innerHTML=h+`</tbody></table>`;
+    return box;
+  }
+  function exOrig(qL,kL,qT,kT){
+    return `<div class="exorig"><div class="oc"><div class="oh">📝 ${esc(qL)}</div><pre>${esc(qT||"（缺）")}</pre></div>`+
+           `<div class="oc"><div class="oh ok">✅ ${esc(kL)}</div><pre>${esc(kT||"（缺）")}</pre></div></div>`;
+  }
+  function viewExercisesFull(){
+    const c=$("#content");c.innerHTML="";
+    const D=(typeof EX_FULL!=="undefined")?EX_FULL:null;
+    if(!D||!D.units){c.appendChild(el("div","card",`<p class="empty" style="padding:18px">习题数据未加载。</p>`));return;}
+    const t=el("div","kp-head");
+    t.innerHTML=`<div class="tag">课本原题 · 标准答案</div><h2>课后习题全集（题目 ↔ 标准答案）</h2>
+      <div class="sub">${esc(D.meta.book)}（${esc(D.meta.author)} · ${esc(D.meta.publisher)}）· 全书 ${D.meta.units} 个单元 · ${D.meta.pairs} 道填空配对。按课本原题分 Task 1 填空 / Task 2 翻译 / Task 3 写作，逐一配标准答案。</div>`;
+    c.appendChild(t);
+    const note=el("div","en-note");
+    note.innerHTML="标准答案源自课本 Part III「Key to Exercise」。原书为扫描件，圈码「①–⑩」OCR 损坏严重，配对表已依题目语义与答案键顺序人工校订；标「原书提示字迹模糊」处系扫描缺字，请以课本原书影像核对。Task 3 课本答案键多为 “Writing (Omitted)”，未提供范文。";
+    c.appendChild(note);
+    D.units.forEach(u=>{
+      const sh=el("div","section-title");sh.innerHTML=`<span class="bar"></span>Unit ${u.n} · ${esc(u.title)}`;c.appendChild(sh);
+      const c1=el("div","ex-card");
+      c1.appendChild(el("div","ext-title","Task 1 · 填空（Fill in the blanks）"));
+      if(u.pairs&&u.pairs.length)c1.appendChild(exPairTable(u.pairs));
+      const d1=el("details","ex-det");
+      d1.innerHTML=`<summary>▸ 展开：Task 1 题目原文 与 答案键原文</summary>`+exOrig("题目（含空格与中文提示）","标准答案（Part III · OCR 校订）",u.q[0],u.k[0]);
+      c1.appendChild(d1);c.appendChild(c1);
+      const c2=el("div","ex-card");
+      c2.appendChild(el("div","ext-title","Task 2 · 翻译（Translate into English）"));
+      const w2=el("div");w2.innerHTML=exOrig("题目（中文原文）","标准答案（参考译文）",u.q[1],u.k[1]);
+      c2.appendChild(w2);c.appendChild(c2);
+      const c3=el("div","ex-card");
+      c3.appendChild(el("div","ext-title","Task 3 · 写作（Writing）"));
+      const om=/Omitted|Onutted|Ormitted|Omit/i.test(u.k[2]||"");
+      const w3=el("div");
+      w3.innerHTML=`<div class="exorig one"><div class="oc"><div class="oh">📝 题目（写作要求）</div><pre>${esc(u.q[2]||"（缺）")}</pre></div></div>`;
+      c3.appendChild(w3);
+      c3.appendChild(el("div","exnote",om?"课本 Part III 答案键标注 <b>Writing (Omitted)</b>，即未提供范文，需自拟。":"答案键："+esc((u.k[2]||"").slice(0,200))));
+      c.appendChild(c3);
+    });
+  }
+
   /* ---------- 视图：主观题 · 写作训练 ---------- */
   function viewSubjective(){
     const c=$("#content");c.innerHTML="";
@@ -876,6 +923,7 @@
     review:{t:"复习计划",c:"艾宾浩斯间隔复习",fn:viewReview},
     mock:{t:"模拟题库",c:"20 套模拟试卷",fn:viewMock},
     exercises:{t:"课本习题",c:"课后练习与解析",fn:viewExercises},
+    expdf:{t:"课后习题·答案",c:"课本原题与标准答案",fn:viewExercisesFull},
     bilingual:{t:"双语对照",c:"原文同步翻译",fn:viewBilingual},
     subjective:{t:"主观题",c:"简答·论述·写作",fn:viewSubjective},
     memory:{t:"记忆背诵",c:"要点·口诀·框架",fn:viewMemory},
@@ -899,7 +947,7 @@
   function renderNav(){
     const nav=$("#nav");nav.innerHTML="";
     [["dashboard","🏠","仪表盘"],["knowledge","📚","知识点"],["mindmap","🧠","思维导图"],
-     ["exercises","📖","课本习题"],["bilingual","📜","双语对照"],["subjective","✍️","主观题"],["memory","🔑","记忆背诵"],
+     ["exercises","📖","课本习题"],["expdf","📑","课后习题·答案"],["bilingual","📜","双语对照"],["subjective","✍️","主观题"],["memory","🔑","记忆背诵"],
      ["fulltext","📄","全文阅读"],["review","🔁","复习计划"],["mock","📝","模拟题库"],["real","🌐","网络真题"],["wrong","⚠️","错题本"]].forEach(([v,ic,t])=>{
       const b=el("button","nav-item"+(cur.view===v?" active":""),"");
       b.innerHTML=`<span class="ic">${ic}</span>${t}`;
