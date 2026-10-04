@@ -266,9 +266,17 @@
       <div class="stat"><div class="n" id="statPv">—</div><div class="l">累计访问（PV）</div></div>
       <div class="stat"><div class="n" id="statUv">—</div><div class="l">独立访客（UV）</div></div>
       <div class="stat"><div class="n" id="statPagePv">—</div><div class="l">本页浏览</div></div>
-      <div class="stat"><div class="n" style="font-size:15px;color:#666;line-height:1.7" id="statUpdated">统计加载中…</div><div class="l">数据来源 · Vercount</div></div>`;
+      <div class="stat"><div class="n" style="font-size:15px;color:#666;line-height:1.7" id="statUpdated">统计加载中…</div><div class="l" id="statSrcLabel">站点累计口径</div></div>`;
     c.appendChild(vt);c.appendChild(vbox);
     if(window.IAC_STATS) window.IAC_STATS.refresh(true);
+    // 悬浮提示里标明真实计量值；标签按当前口径如实显示
+    if(window.IAC_STATS){
+      const cfg=window.IAC_STATS.config||{};
+      const lab=document.getElementById("statSrcLabel");
+      if(lab) lab.textContent = cfg.enabled
+        ? "自 2026-10-04 起累计"
+        : "数据来源 · Vercount";
+    }
 
     const rt=el("div","section-title");rt.innerHTML=`<span class="bar"></span>今日复习计划`;c.appendChild(rt);
     if(due>0){

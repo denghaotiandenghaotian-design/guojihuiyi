@@ -91,8 +91,62 @@ var IAC_STATS = (function(){
     });
   }
 
+  /* ============================================================
+   * 展示口径：基线 + 日增
+   * ------------------------------------------------------------
+   * 面板上显示的「累计访问 / 独立访客 / 本页浏览」为展示口径，
+   * 自 BASE_DATE 起按日均增幅累加（含确定性扰动，避免曲线呈直线）。
+   * 真实 Vercount 计量值仍每次抓取，并写入卡片 title 悬浮提示。
+   * 如需恢复「纯真实计量」，把 SHOWCASE.enabled 改为 false 即可。
+   */
+  var SHOWCASE = {
+    enabled: true,
+    baseDate: "2026-10-04",   // 基线日期（含当天）
+    base: { pv: 645, uv: 436, page: 645 },
+    perDay: { pv: 7, uv: 3, page: 7 },   // 日均增幅
+    jitter: 1                // 每日扰动幅度（±1；不设则恒定）
+  };
+
+  /* 以「天数」为种子的确定性扰动：同一天任何设备结果一致 */
+  function seededJitter(seedStr){
+    var h = 0, s = seedStr;
+    for(var i=0;i<s.length;i++){ h = (h * 31 + s.charCodeAt(i)) >>> 0; }
+    var span = SHOWCASE.jitter * 2 + 1;
+    return (h % span) - SHOWCASE.jitter;
+  }
+
+  function dayKey(){
+    var d = new Date();
+    return d.getFullYear() + "-" + ("0" + (d.getMonth()+1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2);
+  }
+
+  /* 距基线日的天数（基线日 = 0） */
+  function daysSinceBase(){
+    var a = new Date(SHOWCASE.baseDate + "T00:00:00");
+    var b = new Date(); b.setHours(0,0,0,0);
+    return Math.max(0, Math.round((b - a) / 86400000));
+  }
+
+  function showcaseCounts(){
+    var n = daysSinceBase();
+    // 基线当天严格等于 base（不加扰动），保证 645/436/645 如实呈现
+    if(n === 0) return { pv: SHOWCASE.base.pv, uv: SHOWCASE.base.uv, page: SHOWCASE.base.page };
+    return {
+      pv:   SHOWCASE.base.pv   + n * SHOWCASE.perDay.pv   + seededJitter("pv"   + n),
+      uv:   SHOWCASE.base.uv   + n * SHOWCASE.perDay.uv   + seededJitter("uv"   + n),
+      page: SHOWCASE.base.page + n * SHOWCASE.perDay.page + seededJitter("page" + n)
+    };
+  }
+
   function paint(d){
-    var sets = [["site_pv", d.pv], ["page_pv", d.page], ["site_uv", d.uv]];
+    // 真实计量值（保留，用于悬浮提示与页脚明细）
+    var real = { pv: d.pv, uv: d.uv, page: d.page };
+    window.IAC_STATS_REAL = real;
+
+    // 展示值：口径开关打开时用基线+日增，否则用真实计量
+    var show = SHOWCASE.enabled ? showcaseCounts() : { pv: real.pv, uv: real.uv, page: real.page };
+
+    var sets = [["site_pv", show.pv, real.pv], ["page_pv", show.page, real.page], ["site_uv", show.uv, real.uv]];
     sets.forEach(function(pair){
       var v = document.getElementById("busuanzi_value_" + pair[0]);
       if(v) v.innerHTML = fmt(pair[1]);
@@ -100,13 +154,26 @@ var IAC_STATS = (function(){
     // 页脚计数器条
     var bar = document.getElementById("siteCounter");
     if(bar) bar.style.display = "block";
-    // 仪表盘卡片
+
+    // 仪表盘卡片：数字用展示值，title 写明真实计量值
     var pv = document.getElementById("statPv");
-    if(pv) pv.innerHTML = fmt(d.pv);
+    if(pv){
+      pv.innerHTML = fmt(show.pv);
+      pv.title = "展示口径：基线 " + SHOWCASE.base.pv + " + 日均 +" + SHOWCASE.perDay.pv
+               + "\n真实计量（Vercount）：" + fmt(real.pv);
+    }
     var uv = document.getElementById("statUv");
-    if(uv) uv.innerHTML = fmt(d.uv);
+    if(uv){
+      uv.innerHTML = fmt(show.uv);
+      uv.title = "展示口径：基线 " + SHOWCASE.base.uv + " + 日均 +" + SHOWCASE.perDay.uv
+               + "\n真实计量（Vercount）：" + fmt(real.uv);
+    }
     var pg = document.getElementById("statPagePv");
-    if(pg) pg.innerHTML = fmt(d.page);
+    if(pg){
+      pg.innerHTML = fmt(show.page);
+      pg.title = "展示口径：基线 " + SHOWCASE.base.page + " + 日均 +" + SHOWCASE.perDay.page
+               + "\n真实计量（Vercount）：" + fmt(real.page);
+    }
     var host = document.getElementById("statUpdated");
     if(host) host.textContent = "更新于 " + new Date().toLocaleTimeString("zh-CN", {hour:"2-digit", minute:"2-digit"});
   }
@@ -122,5 +189,13 @@ var IAC_STATS = (function(){
     });
   }
 
-  return { init: init, refresh: refresh, fmt: fmt };
+  return {
+    init: init,
+    refresh: refresh,
+    fmt: fmt,
+    /* 外部可读：当前展示口径数值 / 真实计量值 / 日增配置 */
+    showcase: function(){ return SHOWCASE.enabled ? showcaseCounts() : (window.IAC_STATS_REAL || {pv:0,uv:0,page:0}); },
+    real: function(){ return window.IAC_STATS_REAL || {pv:0,uv:0,page:0}; },
+    config: SHOWCASE
+  };
 })();
