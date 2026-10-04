@@ -259,6 +259,17 @@
       <div class="stat"><div class="n">${exams}</div><div class="l">已完成模考</div></div>`;
     hero.appendChild(stats);c.appendChild(hero);
 
+    // 站点访问量（Vercount 实测可用；失败显示 —，不阻塞）
+    const vt=el("div","section-title");vt.innerHTML=`<span class="bar"></span>站点使用情况`;
+    const vbox=el("div","stat-row");
+    vbox.innerHTML=`
+      <div class="stat"><div class="n" id="statPv">—</div><div class="l">累计访问（PV）</div></div>
+      <div class="stat"><div class="n" id="statUv">—</div><div class="l">独立访客（UV）</div></div>
+      <div class="stat"><div class="n" id="statPagePv">—</div><div class="l">本页浏览</div></div>
+      <div class="stat"><div class="n" style="font-size:15px;color:#666;line-height:1.7" id="statUpdated">统计加载中…</div><div class="l">数据来源 · Vercount</div></div>`;
+    c.appendChild(vt);c.appendChild(vbox);
+    if(window.IAC_STATS) window.IAC_STATS.refresh(true);
+
     const rt=el("div","section-title");rt.innerHTML=`<span class="bar"></span>今日复习计划`;c.appendChild(rt);
     if(due>0){
       const box=el("div","card");
@@ -958,6 +969,7 @@
 
   /* ---------- 启动 ---------- */
   function init(){
+    if(window.IAC_STATS) window.IAC_STATS.init();
     renderNav();navigate("dashboard");
     $("#menuBtn").addEventListener("click",()=>{$("#sidebar").classList.toggle("open");$("#scrim").classList.toggle("show");});
     $("#scrim").addEventListener("click",()=>{$("#sidebar").classList.remove("open");$("#scrim").classList.remove("show");});

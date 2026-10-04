@@ -329,3 +329,20 @@ details.ex-det summary{cursor:pointer;color:var(--text-soft);font-size:12.5px;ou
 .exorig .oh.ok{background:#e9f8f0;color:#0f7a5f}
 .exorig pre{margin:0;padding:10px 12px;white-space:pre-wrap;word-break:break-word;font-size:12px;line-height:1.7;max-height:360px;overflow:auto}
 .exnote{margin-top:8px;background:#fff8e8;border:1px solid #f0d9a8;color:#8a6a1a;border-radius:8px;padding:9px 12px;font-size:12.5px;line-height:1.6}
+
+/* ---------- 访问统计（页脚计数器 · 不蒜子兼容 id） ---------- */
+.site-counter{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  padding:8px 16px;text-align:center;
+  font-size:12.5px;color:var(--text-dim);
+  background:rgba(255,255,255,.92);
+  border-top:1px solid var(--border);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+}
+.site-counter b{color:var(--accent);font-weight:800;font-size:13.5px;margin:0 2px}
+.site-counter .sc-note{color:#a0a4ad;margin-left:8px;font-size:11.5px}
+@media(max-width:760px){
+  .site-counter{font-size:11px;padding:6px 10px;line-height:1.6}
+  .site-counter .sc-note{display:none}
+  .content{padding-bottom:76px}
+}
