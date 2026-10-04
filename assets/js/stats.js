@@ -124,15 +124,3 @@ var IAC_STATS = (function(){
 
   return { init: init, refresh: refresh, fmt: fmt };
 })();
-
-/* Cloudflare Web Analytics：把 token 填在下方即可生效（留空则不加载） */
-var IAC_CF_TOKEN = "";   // 例："cfa-xxxxxxxxxxxx"
-if(IAC_CF_TOKEN){
-  (function(){
-    var s = document.createElement("script");
-    s.defer = true;
-    s.src = "https://static.cloudflareinsights.com/beacon.min.js";
-    s.setAttribute("data-cf-beacon", JSON.stringify({ token: IAC_CF_TOKEN }));
-    document.head.appendChild(s);
-  })();
-}
